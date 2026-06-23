@@ -1,0 +1,184 @@
+{
+  "informations": "Information",
+  "usefulLinks": "Useful Links",
+  "myFavoriteProducts": "My Favorite Products",
+  "whatsapp": {
+    "message": "Hello! I'm interested in *{name}*\nPrice: ${price}\n{url}"
+  },
+  "addToFavorites": "Add to Favorites",
+  "removeFromFavorites": "Remove from Favorites",
+  "latest": "Latest",
+  "oldest": "Oldest",
+  "price_low_to_high": "Price: Low to High",
+  "price_high_to_low": "Price: High to Low",
+  "search_by_product_name": "Search by product name...",
+  "shop_by_category": "Shop by Category",
+  "contact_us": "Contact Us",
+  "best_seller": "Best Seller",
+  "hero_image_alt": "Diana Products Hero Image",
+  "seo": {
+    "home": {
+      "title": "Home - Diana",
+      "description": "Welcome to Diana - Your destination for elegant fashion and modern style"
+    },
+    "products": {
+      "title": "Our Products - Diana",
+      "description": "Discover Diana's latest collections of elegant fashion"
+    },
+    "aboutUs": {
+      "title": "About Us - Diana",
+      "description": "Learn about Diana's story and our journey in the world of fashion"
+    },
+    "contact": {
+      "title": "Contact Us - Diana",
+      "description": "We're here to help you, get in touch anytime"
+    }
+  },
+  "features": {
+    "customerService": {
+      "title": "Excellent Customer Service",
+      "description": "We're here to help you"
+    },
+    "SecurityPayment": {
+      "title": "Secure Payment",
+      "description": "100% Safe Shopping Experience"
+    },
+    "highQuality": {
+      "title": "High Quality",
+      "description": "Premium fabrics and unique designs"
+    },
+    "fastShipping": {
+      "title": "Fast Shipping",
+      "description": "Within 2-5 business days"
+    },
+    "luxuryFabrics": {
+      "title": "Luxury Fabrics",
+      "description": "Carefully selected from the finest materials"
+    },
+    "exclusivePieces": {
+      "title": "Exclusive Pieces",
+      "description": "Unique designs that won't be repeated"
+    },
+    "returnsAndExchanges": {
+      "title": "Returns & Exchanges",
+      "description": "Easy return and exchange process"
+    },
+    "luxuryPackaging": {
+      "title": "Luxury Packaging",
+      "description": "Elegant packaging for every order"
+    },
+    "subTitle1": "Every decision we make starts with one question",
+    "subTitle2": "Will this make our customer's life better?",
+    "title": "Why Do Customers Choose Us?"
+  },
+  "newCollection": "New Collection",
+  "aboutUs": {
+    "title": "About Hatoon & Diana",
+    "description": "We believe that the abaya is more than just clothing; it is a reflection of culture and identity. We create abayas that express who you are, accompanying you through every moment with confidence and elegance.",
+    "readMoreAboutUs": "Learn More About Us"
+  },
+  "about": {
+    "hero": {
+      "headline": "Our Story",
+      "title": "It Started from a Very Personal Experience",
+      "description": "The idea for our store began from a very personal experience… the difficulty of finding abayas and hijabs that combine elegance, quality, and a modern touch all at once."
+    },
+    "whoWeAre": {
+      "headline": "Who We Are",
+      "title": "Two Sisters, One Vision",
+      "description": "We are two sisters who believe that the hijab is not only a commitment but also a style, identity, and beauty. From this belief came our goal: to offer abayas, hijabs, and all hijab essentials with distinctive, feminine, and practical designs, while paying close attention to fabric quality and the small details that make all the difference.",
+      "features": {
+        "passion": {
+          "title": "Passion",
+          "description": "We carefully choose every piece as if we were choosing it for ourselves."
+        },
+        "quality": {
+          "title": "Quality",
+          "description": "We focus on the finest fabrics and meticulous details that make the difference."
+        },
+        "elegance": {
+          "title": "Elegance",
+          "description": "Feminine and modern designs that reflect your unique style."
+        }
+      }
+    },
+    "philosophy": {
+      "headline": "Our Philosophy",
+      "title": "Chosen with Care",
+      "description": "We select every piece carefully, as if we were choosing it for ourselves. We focus on comfort, everyday elegance, and effortless styling to help every woman discover her own taste with ease."
+    },
+    "cta": {
+      "headline": "More Than Just a Store",
+      "title": "A Space for Every Hijabi Woman",
+      "description": "This store is more than just a place to shop… it's a space for every hijabi woman who loves taking care of herself and expressing her beauty in her own unique way.",
+      "shopNow": "Shop Now",
+      "contactUs": "Contact Us"
+    }
+  },
+  "sections": {
+    "categories": {
+      "title": "Shop Our Collection"
+    },
+    "products": {
+      "mostSeller": "Best Sellers"
+    }
+  },
+  "links": {
+    "shopNow": "Shop Now",
+    "orderNow": "Order Now",
+    "moreDetails": "More Details",
+    "followUs": "Follow Us",
+    "ourStory": "Our Story",
+    "homePage": "Home",
+    "contact": "Contact Us",
+    "ourProducts": "Our Products",
+    "faq": "FAQ",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "exchangeAndReturn": "Exchange & Return Policy"
+  },
+  "cta": {
+    "followUs": "Follow Us",
+    "title": "Stay Updated",
+    "instagram": "Instagram",
+    "description": "Follow us on Instagram and stay updated with the latest offers and fashion trends",
+    "packaging": {
+      "title": "Elegant Packaging Just for You",
+      "description1": "We wrap your order like a gift",
+      "description2": "Because you deserve the best"
+    }
+  },
+  "footer": {
+    "madeWith": "Made with",
+    "by": "by",
+    "contactDescription": "We are here to help you anytime. Don't hesitate to contact us whenever you need support.",
+    "availableHours": "24/7 Customer Support",
+    "rights": "All Rights Reserved to GOPSA DESIGN",
+    "about": {
+      "line1": "Fashion that embodies elegance and sophistication",
+      "line2": "Beauty in the details... Confidence in your choice"
+    }
+  },
+  "filter": {
+    "title": "Filter",
+    "reset": "Reset Filters"
+  },
+  "products": {
+    "subtitle": "Discover carefully curated premium collections for you",
+    "title": "Our Products",
+    "explore": "Explore",
+    "results": "Results",
+    "empty": {
+      "title": "No Products Found",
+      "description": "Try changing the filters or searching with a different keyword"
+    }
+  },
+  "ourStory": {
+    "title": "Our Story",
+    "subtitle": "A journey of beauty, craftsmanship, and timeless elegance"
+  },
+  "collection": {
+    "title": "Our New Collection",
+    "description": "Our latest collection has arrived — elegant pieces that blend authenticity with modern style."
+  }
+}
