@@ -4,8 +4,6 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "@nuxtjs/i18n",
     "@nuxt/image",
-    "@nuxtjs/robots",
-    "@nuxtjs/sitemap",
   ],
 
   site: {
@@ -15,7 +13,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiBase: process.env.NUXT_PUBLIC_API_BASE || "http://127.0.0.1:8000/api",
+      apiBase: process.env.NUXT_PUBLIC_API_BASE || "https://api.hatounanddayana.com/api",
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "http://localhost:3000",
       phone: "+963995273158",
     },
@@ -61,11 +59,6 @@ export default defineNuxtConfig({
     "/about-us": { prerender: true },
     "/contact": { prerender: true },
     "/products": { swr: 3600 },
-    "/**": {
-      headers: {
-        "X-Robots-Tag": "index, follow",
-      },
-    },
   },
 
   compatibilityDate: "2025-01-15",

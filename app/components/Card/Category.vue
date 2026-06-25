@@ -39,12 +39,6 @@
         <h3 class="sm:text-xl font-bold text-brand-forest  line-clamp-1">
           {{ category.name }}
         </h3>
-        <p
-          v-if="category.description"
-          class="text-brand-forest line-clamp-1"
-        >
-          {{ category.description }}
-        </p>
     </div>
   </NuxtLink>
 </template>
