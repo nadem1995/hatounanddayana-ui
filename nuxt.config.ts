@@ -7,14 +7,14 @@ export default defineNuxtConfig({
   ],
 
   site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL || "http://localhost:3000",
+    url: process.env.NUXT_PUBLIC_SITE_URL || "https://hatounanddayana.com",
   },
 
 
   runtimeConfig: {
     public: {
       apiBase: process.env.NUXT_PUBLIC_API_BASE || "https://api.hatounanddayana.com/api",
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "http://localhost:3000",
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://hatounanddayana.com",
       phone: "+963995273158",
     },
   },
@@ -31,7 +31,7 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    baseUrl: process.env.NUXT_PUBLIC_SITE_URL || "http://localhost:3000",
+    baseUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://hatounanddayana.com",
     locales: [
       {
         code: "en",
