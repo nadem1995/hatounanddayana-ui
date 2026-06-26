@@ -28,7 +28,7 @@ useHead({
   },
   link: [
     { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-    // ❌ removed canonical from here (add it per page instead)
+
   ],
   script: [
     {

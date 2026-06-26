@@ -1,9 +1,9 @@
 <template>
-  <AppHero :heroImage="data.hero_image" />
+  <HomeHero :heroImage="data.data.heroImage" />
   <div class="rounded-2xl -translate-y-3 space-y-6 overflow-hidden">
     <AppFeatuers />
     <UContainer class="py-5 space-y-30">
-      <SectionCategories :categories="data.categories" />
+      <SectionCategories v-if="data.data.categories.length>0" :categories="data.data.categories" />
       <AppCTA />
       <AppFolowUs />
     </UContainer>

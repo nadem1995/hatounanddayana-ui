@@ -5,13 +5,13 @@
     :aria-label="$t('collection.ariaLabel')"
   >
     <NuxtImg
-      src="https://placehold.co/1200x400/c4a882/f1e7db"
+      src="/images/placeholders/1200x200.webp"
       :alt="$t('collection.imageAlt')"
       width="1200"
-      height="400"
+      height="200"
       format="webp"
       loading="lazy"
-      class="absolute inset-0 w-full h-full object-cover transition duration-1000 group-hover:scale-105"
+      class="absolute inset-0 w-full h-full object-cover transition duration-1000 group-hover:scale-104"
     />
     <div
       :aria-hidden="true"

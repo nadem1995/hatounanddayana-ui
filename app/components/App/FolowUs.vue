@@ -1,3 +1,5 @@
+<script setup lang="ts">
+</script>
 <template>
   <section aria-labelledby="instagram-heading">
     <AppSectionTitle :title="$t('cta.followUs')" />
@@ -87,68 +89,68 @@
           <div class="grid grid-cols-3 gap-2 sm:gap-3 h-full">
             <!-- Tall left -->
             <NuxtImg
-              src="https://placehold.co/500x700"
-              :alt="$t('cta.gallery.image1Alt')"
-              width="500"
-              height="700"
+              src="images/placeholders/200x400.webp"
+              alt="Hatoun and dayana"
+              width="200"
+              height="420"
               format="webp"
               loading="lazy"
-              class="col-span-1 row-span-2 h-full min-h-[240px] sm:min-h-[320px] w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
+              class="col-span-1 row-span-2 h-auto w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
             />
 
             <!-- Top wide -->
             <NuxtImg
-              src="https://placehold.co/800x400"
-              :alt="$t('cta.gallery.image2Alt')"
-              width="800"
-              height="400"
+              src="images/placeholders/400x200.webp"
+              alt="Hatoun and dayana"
+              width="400"
+              height="200"
               format="webp"
               loading="lazy"
-              class="col-span-2 h-32 sm:h-44 w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
+              class="col-span-2 h-auto  w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
             />
 
             <!-- Small 1 -->
             <NuxtImg
-              src="https://placehold.co/400"
-              :alt="$t('cta.gallery.image3Alt')"
-              width="400"
-              height="400"
+              src="images/placeholders/200.webp"
+              alt="Hatoun and dayana"
+              width="200"
+              height="200"
               format="webp"
               loading="lazy"
-              class="h-full w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
+              class="h-auto w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
             />
 
             <!-- Small 2 -->
             <NuxtImg
-              src="https://placehold.co/400"
-              :alt="$t('cta.gallery.image4Alt')"
-              width="400"
-              height="400"
+              src="images/placeholders/200.webp"
+              alt="Hatoun and dayana"
+              width="200"
+              height="200"
               format="webp"
               loading="lazy"
-              class="h-full w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
+              class="h-auto w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
             />
 
             <!-- Bottom wide -->
             <NuxtImg
-              src="https://placehold.co/800x400"
-              :alt="$t('cta.gallery.image5Alt')"
-              width="800"
-              height="400"
+              src="images/placeholders/400x200.webp"
+              alt="Hatoun and dayana"
+              width="400"
+              height="200"
               format="webp"
               loading="lazy"
-              class="col-span-2 h-32 sm:h-44 w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
+              class="col-span-2 h-auto  w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
             />
 
             <!-- Bottom single -->
             <NuxtImg
-              src="https://placehold.co/500x700"
-              :alt="$t('cta.gallery.image6Alt')"
-              width="500"
-              height="700"
+              src="images/placeholders/200.webp"
+              alt="Hatoun and dayana"
+              width="200"
+              height="200"
               format="webp"
               loading="lazy"
-              class="h-32 sm:h-44 w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
+              class="h-auto w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
             />
           </div>
         </div>

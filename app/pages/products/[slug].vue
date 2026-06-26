@@ -1,25 +1,25 @@
 <template>
-  <div class="space-x-2">
-    <UButton
-    label="dolores-at-ea"
-    :to="{ name: 'products-slug', params: { slug: 'dolores-at-ea' } }"
-  />
+<!--  <div class="space-x-2">-->
+<!--    <UButton-->
+<!--    label="dolores-at-ea"-->
+<!--    :to="{ name: 'products-slug', params: { slug: 'dolores-at-ea' } }"-->
+<!--  />-->
 
-  <UButton
-    label="illum-quod-beatae"
-    :to="{ name: 'products-slug', params: { slug: 'illum-quod-beatae' } }"
-  />
+<!--  <UButton-->
+<!--    label="illum-quod-beatae"-->
+<!--    :to="{ name: 'products-slug', params: { slug: 'illum-quod-beatae' } }"-->
+<!--  />-->
 
-  
-  <UButton
-    label="sssssssssss22222222222"
-    :to="{ name: 'products-slug', params: { slug: 'sssssssssss22222222222' } }"
-  />
-  </div>
+<!--  -->
+<!--  <UButton-->
+<!--    label="sssssssssss22222222222"-->
+<!--    :to="{ name: 'products-slug', params: { slug: 'sssssssssss22222222222' } }"-->
+<!--  />-->
+<!--  </div>-->
 
-  <pre class="text-xs">
-    {{ product }}
-  </pre>
+<!--  <pre class="text-xs">-->
+<!--    {{ product }}-->
+<!--  </pre>-->
 </template>
 
 <script setup>
@@ -27,7 +27,7 @@
 const route = useRoute();
 
 const { data: product } = await useApiFetch(
-  () => `products/${route.params.slug}`, 
+  () => `products/${route.params.slug}`,
   {
     watch: [() => route.params.slug]
   }
