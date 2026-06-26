@@ -10,7 +10,15 @@ export default defineNuxtConfig({
     url: process.env.NUXT_PUBLIC_SITE_URL || "https://hatounanddayana.com",
   },
 
-
+  nitro: {
+    prerender: {
+      failOnError: false,
+      ignore: ['/about-us'],
+      autoSubfolderIndex: false,
+      crawlLinks: false,
+      routes: [] // ✅ no routes to prerender
+    }
+  },
   runtimeConfig: {
     public: {
       apiBase: process.env.NUXT_PUBLIC_API_BASE || "https://api.hatounanddayana.com/api",

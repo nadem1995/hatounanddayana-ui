@@ -9,7 +9,7 @@
         format="webp"
         :loading="index < 4 ? 'eager' : 'lazy'"
         :src="category.image"
-        :alt="`${category.name} - ${$t('category_image_alt')}`"
+        :alt="category.name"
         width="150"
         height="180"
         class="w-full h-auto rounded-2xl object-cover transition-transform duration-500 group-hover:scale-104"

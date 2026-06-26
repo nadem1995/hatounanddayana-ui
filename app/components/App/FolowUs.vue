@@ -76,7 +76,7 @@
             size="xl"
             block
             :label="$t('links.followUs')"
-            :aria-label="$t('links.followUsOn', { platform: 'Instagram' })"
+            :aria-label="$t('links.followUs', { platform: 'Instagram' })"
             class="rounded-full font-black p-3 w-max text-white hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-300"
             style="
               background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
