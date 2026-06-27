@@ -30,7 +30,7 @@
 
           <!-- CTA Button -->
           <UButton
-            to="https://www.instagram.com/hatoundayana?igsh=MWY3dnFjYTZmeWpndg%3D%3D"
+            to="https://www.instagram.com/hatoundayana"
             target="_blank"
             rel="noopener noreferrer"
             icon="i-mdi-instagram"

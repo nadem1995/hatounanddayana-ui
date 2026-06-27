@@ -1,6 +1,7 @@
 <template>
   <UApp :locale="locales[locale]">
-    <NuxtLoadingIndicator color="#346a36" />
+    <NuxtLoadingIndicator color="linear-gradient(to right, #07342f, #d5ba94)"
+                          :height="2"  />
     <NuxtRouteAnnouncer />
     <NuxtLayout>
       <NuxtPage/>
@@ -11,12 +12,14 @@
 <script setup lang="ts">
 import * as locales from "@nuxt/ui/locale"
 
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 const config = useRuntimeConfig()
 
 const lang = computed(() => locale.value)
 const dir = computed(() => locales[locale.value].dir)
-const siteUrl = config.public.siteUrl || "http://localhost:3000"
+const siteUrl = config.public.siteUrl || "https://hatounanddayana.com/"
+const siteName = computed(() => t('seo.app.appName'))
+const siteDescription = computed(() => t('seo.app.siteDescription'))
 
 useHead({
   htmlAttrs: {
@@ -24,11 +27,14 @@ useHead({
     dir,
   },
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk}` : "ديانا"
+    return titleChunk ? `${titleChunk} | ${siteName.value}` : siteName.value
   },
+  meta: [
+    { name: 'theme-color', content: '#d5ba94' },
+  ],
   link: [
     { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-
+    { rel: 'canonical', href: siteUrl },
   ],
   script: [
     {
@@ -36,7 +42,7 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: 'ديانا',
+        name: siteName.value,
         url: siteUrl,
         logo: `${siteUrl}/logo.png`,
         contactPoint: {
@@ -46,22 +52,26 @@ useHead({
           availableLanguage: ['Arabic', 'English'],
         },
         sameAs: [
-          // 'https://www.instagram.com/diana',
-          // 'https://www.facebook.com/diana',
+           'https://www.instagram.com/hatoundayana',
         ]
       })
     }
   ]
 })
 
-// ✅ Global fallback only — pages will override title & description
 useSeoMeta({
+  title: siteName,
+  description: siteDescription,
+  ogTitle: siteName,
+  ogDescription: siteDescription,
   ogImage: `${siteUrl}/og-image.jpg`,
   ogUrl: siteUrl,
   ogType: 'website',
-  ogSiteName: 'ديانا',
-  ogLocale: computed(() => locale.value === 'ar' ? 'ar_SA' : 'en_US'), // ✅ reactive
+  ogSiteName: siteName,
+  ogLocale: computed(() => locale.value === 'ar' ? 'ar_SA' : 'en_US'),
   twitterCard: 'summary_large_image',
+  twitterTitle: siteName,
+  twitterDescription: siteDescription,
   twitterImage: `${siteUrl}/og-image.jpg`,
   robots: 'index, follow',
 })

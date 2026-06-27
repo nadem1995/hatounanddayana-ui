@@ -4,12 +4,12 @@
   variant="ghost"
   class="relative p-0 hover:bg-transparent"
 >
-  <div class="relative flex items-center justify-center size-9 rounded-full border-2 border-brand-forest/20 hover:border-brand-forest transition-all duration-300">
-    
+  <div class="relative rounded-full border-2 w-9 h-9 flex items-center justify-center border-brand-forest/20 hover:border-brand-forest transition-all duration-300">
+
     <!-- Heart Icon -->
     <UIcon
-      name="i-material-symbols-light-favorite-outline"
-      class="size-7 text-brand-forest"
+      name="i-lucide-heart"
+      class="text-brand-forest size-5"
     />
 
     <!-- Count Badge -->
