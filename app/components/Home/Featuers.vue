@@ -1,5 +1,5 @@
 <template>
-  <section class="relative overflow-hidden py-15 bg-primary">
+  <section class="relative xs:my-30 my-15 overflow-hidden py-15 bg-primary">
     <!-- Background grid pattern -->
     <div
       :aria-hidden="true"
@@ -18,14 +18,12 @@
     <UContainer class="relative">
       <!-- Header -->
       <div
-        class="mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4"
+        class="mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between xs:gap-4 gap-2"
       >
-        <h2
-          class="text-4xl lg:text-6xl font-black leading-none text-brand-forest"
-        >
+        <h2 class="text-3xl lg:text-6xl font-bold text-brand-forest">
           {{ $t("features.title") }}
         </h2>
-        <p class="text-[#f1d8b4] text-lg max-w-xs leading-relaxed">
+        <p class="text-brand-forest/90 xs:text-lg max-w-xs">
           {{ $t("features.subTitle1") }} <br />
           {{ $t("features.subTitle2") }}
           ?
@@ -45,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Feature } from "~/types";
+import type { Feature } from "app/types";
 
 const { t } = useI18n();
 

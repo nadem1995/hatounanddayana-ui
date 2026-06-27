@@ -24,7 +24,7 @@
       <p class="font-bold text-primary sm:text-xl">
         {{ feature.title }}
       </p>
-      <p class="text-primary/70">
+      <p class="xs:text-md text-xs text-primary/70">
         {{ feature.description }}
       </p>
     </div>

@@ -5,70 +5,32 @@
     <AppSectionTitle :title="$t('cta.followUs')" />
 
     <div class="relative overflow-hidden rounded-3xl bg-brand-forest">
-      <!-- Bg pattern -->
-      <div
-        class="pattern-crosshatch absolute inset-0 opacity-[0.03] pointer-events-none"
-        aria-hidden="true"
-      />
 
-      <!-- Glow -->
-      <div
-        class="absolute -top-32 -left-32 size-96 rounded-full bg-primary/10 blur-3xl pointer-events-none"
-        aria-hidden="true"
-      />
+
 
       <div class="relative grid lg:grid-cols-5">
         <!-- ── Content ── -->
         <div
           class="lg:col-span-2 flex flex-col justify-center gap-5 sm:gap-6 p-6 sm:p-10 lg:p-14"
         >
-          <!-- Instagram badge -->
-          <div
-            class="inline-flex w-fit items-center gap-3 rounded-full border border-primary/20 bg-primary/10 px-4 py-2"
-            aria-hidden="true"
-          >
-            <div
-              class="flex size-7 items-center justify-center rounded-full shrink-0"
-              style="
-                background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
-              "
-            >
-              <UIcon name="i-mdi-instagram" class="size-4 text-white" />
-            </div>
-            <span class="text-primary text-sm font-semibold">
-              {{ $t("cta.instagram") }}
-            </span>
-          </div>
-
           <!-- Title -->
           <h2
             id="instagram-heading"
-            class="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary leading-tight"
+            class="text-3xl lg:text-6xl font-bold  text-primary"
           >
             {{ $t("cta.title") }}
           </h2>
 
-          <!-- Divider -->
-          <USeparator
-            :ui="{
-              root: 'max-w-[80px]',
-              border: 'border-primary/20',
-              icon: 'text-primary/40 size-4',
-            }"
-            icon="i-material-symbols-light-diamond-shine"
-            decorative
-          />
-
           <!-- Description -->
           <p
-            class="text-primary/70 max-w-xs text-sm sm:text-base leading-relaxed"
+            class="text-primary/90 xs:text-lg max-w-xs"
           >
             {{ $t("cta.description") }}
           </p>
 
           <!-- CTA Button -->
           <UButton
-            to="https://www.instagram.com/your_account"
+            to="https://www.instagram.com/hatoundayana?igsh=MWY3dnFjYTZmeWpndg%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             icon="i-mdi-instagram"
@@ -121,28 +83,6 @@
             />
 
             <!-- Small 2 -->
-            <NuxtImg
-              src="images/placeholders/200.webp"
-              alt="Hatoun and dayana"
-              width="200"
-              height="200"
-              format="webp"
-              loading="lazy"
-              class="h-auto w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
-            />
-
-            <!-- Bottom wide -->
-            <NuxtImg
-              src="images/placeholders/400x200.webp"
-              alt="Hatoun and dayana"
-              width="400"
-              height="200"
-              format="webp"
-              loading="lazy"
-              class="col-span-2 h-auto  w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
-            />
-
-            <!-- Bottom single -->
             <NuxtImg
               src="images/placeholders/200.webp"
               alt="Hatoun and dayana"

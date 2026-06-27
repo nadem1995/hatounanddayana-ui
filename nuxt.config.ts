@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     public: {
       apiBase: process.env.NUXT_PUBLIC_API_BASE || "https://api.hatounanddayana.com/api",
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://hatounanddayana.com",
-      phone: "+963995273158",
+      phone: "+963983129860",
     },
   },
 

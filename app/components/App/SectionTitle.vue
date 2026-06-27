@@ -1,10 +1,9 @@
 <template>
-  <div class="relative xs:mb-20 mb-10 flex flex-col items-center xs:gap-8 gap-3 text-center">
+  <div class="relative xs:mt-30 mt-15 xs:mb-15 mb-10 flex flex-col items-center xs:gap-8 gap-3 text-center">
     <!-- Title -->
-    <h2 class="text-4xl lg:text-6xl font-bold text-brand-forest">
+    <h2 class="text-3xl lg:text-6xl font-bold text-brand-forest">
       {{ title }}
     </h2>
-
     <!-- Divider -->
     <div class="flex items-center gap-3 mt-2">
       <div class="h-px w-12 bg-brand-forest/20" />
@@ -13,7 +12,6 @@
       </svg>
       <div class="h-px w-12 bg-brand-forest/20" />
     </div>
-
   </div>
 </template>
 

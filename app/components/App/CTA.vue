@@ -1,3 +1,5 @@
+<script setup lang="ts">
+</script>
 <template>
   <NuxtLink
     to="/products"
@@ -23,10 +25,10 @@
     >
       <!-- Left copy -->
       <div class="space-y-3">
-        <h3 class="text-4xl text-primary font-bold">
+        <h3 class="text-3xl lg:text-6xl text-primary font-bold">
           {{ $t("collection.title") }}
         </h3>
-        <p class="text-primary/70 max-w-xs">
+        <p class="text-primary/90 xs:text-lg max-w-xs">
           {{ $t("collection.description") }}
         </p>
       </div>

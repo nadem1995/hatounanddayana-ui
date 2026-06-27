@@ -1,15 +1,25 @@
 <template>
-  <div class="w-full aspect-1200/auto bg-gray-100">
   <NuxtImg
+    src="https://placehold.co/1080x1920/png"
+    class="block md:hidden w-full h-auto"
+    width="1080"
+    height="1920"
+    sizes="100vw"
     preload
-    format="webp"
     loading="eager"
-    alt="Hero image"
-    :src="imgSrc"
-    class="w-full h-auto"
-    @error="onImageError"
+    fetchpriority="high"
   />
-  </div>
+
+  <NuxtImg
+    src="https://placehold.co/1920x1080/png"
+    class="hidden md:block w-full h-auto"
+    width="1920"
+    height="1080"
+    sizes="100vw"
+    preload
+    loading="eager"
+    fetchpriority="high"
+  />
 </template>
 
 <script setup lang="ts">

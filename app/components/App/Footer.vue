@@ -23,7 +23,6 @@
           </div>
           <AppFooterColumn :title="$t('usefulLinks')" :links="usefulLinks" />
           <AppFooterColumn :title="$t('informations')" :links="infoLinks" />
-
           <div
             class="backdrop-blur-md bg-brand-forest/5 border border-brand-forest/15 rounded-2xl p-4"
           >
@@ -71,16 +70,21 @@
       </UContainer>
     </div>
 
-    <!-- Bottom bar -->
     <div class="py-4">
       <UContainer>
-        <div
-          class="flex flex-col sm:flex-row items-center justify-between gap-2"
-        >
-          <p class="text-xs text-[#f1e7db]/60">
-            © {{ new Date().getFullYear() }} — {{ $t("footer.rights") }}
-          </p>
-          <p class="flex items-center gap-1.5 text-xs text-[#f1e7db]/60">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-forest/90">
+          <span> © {{ new Date().getFullYear() }} — {{ $t("footer.rights") }} <UButton
+            :aria-label="$t('links.followUs', { platform: 'website' })"
+            rel="noopener noreferrer"
+            target="_blank"
+            to="https://www.instagram.com/gopsa.design/"
+            label="GOPSA DESIGN"
+            trailing-icon="i-lucide-arrow-up-right"
+            variant="link"
+            size="xs"
+            class="text-brand-forest/90 font-medium hover:text-brand-forest"
+          /> </span>
+          <p class="flex items-center gap-1.5">
             {{ $t("footer.madeWith") }}
             <UIcon
               name="i-lucide-heart"
@@ -88,14 +92,18 @@
               aria-hidden="true"
             />
             {{ $t("footer.by") }}
-            <a
-              href="https://gopsa.design"
-              target="_blank"
+            {{ $t("footer.desiner") }}
+            <UButton
+              :aria-label="$t('links.followUs', { platform: 'website' })"
               rel="noopener noreferrer"
-              class="text-[#b8972e] hover:text-[#d4af37] font-semibold transition-colors duration-200"
-            >
-              Gopsa Design
-            </a>
+              target="_blank"
+              :to="NJATAZHATI"
+              :label="$t('links.njat')"
+              trailing-icon="i-lucide-arrow-up-right"
+              variant="link"
+              size="xs"
+              class="text-brand-forest/90 font-medium hover:text-brand-forest"
+            />
           </p>
         </div>
       </UContainer>
@@ -146,4 +154,7 @@ const infoLinks = computed<NavigationMenuItem[]>(() => [
     active: route.name?.toString().startsWith("terms"),
   },
 ]);
+
+
+const NJATAZHATI='https://www.instagram.com/designer.njatazhri?igsh=MTcxa2JzZ2dwcDV6ag==https://www.instagram.com/designer.njatazhri?igsh=MTcxa2JzZ2dwcDV6ag=='
 </script>

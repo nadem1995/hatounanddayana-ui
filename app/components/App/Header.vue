@@ -6,7 +6,7 @@
     }"
   >
     <template #left>
-      <TemplateMenu class="lg:hidden" />
+<!--      <TemplateMenu class="lg:hidden" />-->
       <NuxtLink :to="{ name: 'index' }">
         <AppLogo class="w-auto h-6 shrink-0" />
       </NuxtLink>
@@ -25,7 +25,6 @@
     <template #right>
       <AppFavorite />
       <AppLangSwitcher />
-      <!-- <UColorModeButton />-->
     </template>
 
     <template #body>
