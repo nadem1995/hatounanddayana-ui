@@ -1,7 +1,7 @@
 <template>
-  <footer class="bg-primary p-2">
+  <footer>
     <div>
-      <UContainer class="py-14">
+      <UContainer>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           <!-- Column 1: Logo & About -->
           <div class="flex flex-col gap-4">
@@ -69,7 +69,6 @@
         </div>
       </UContainer>
     </div>
-
     <div class="py-4">
       <UContainer>
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-forest/90">

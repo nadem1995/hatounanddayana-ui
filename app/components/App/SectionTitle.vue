@@ -1,5 +1,5 @@
 <template>
-  <div class="relative xs:mt-30 mt-15 xs:mb-15 mb-10 flex flex-col items-center xs:gap-8 gap-3 text-center">
+  <div class="relative xs:mt-30 mt-5 xs:mb-15 mb-4 flex flex-col items-center xs:gap-8 gap-2 text-center">
     <!-- Title -->
     <h2 class="text-3xl lg:text-6xl font-bold text-brand-forest">
       {{ title }}

@@ -5,7 +5,7 @@
     :title="$t('sections.categories.title')"
   />
   <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 justify-center">
-    <div class="col-span-2 md:col-span-1 lg:col-span-2 lg:row-span-2">
+    <div class="col-span-1 md:col-span-1 lg:col-span-2 lg:row-span-2">
       <CardCategory
         v-if="categories[0]"
         :category="categories[0]"
