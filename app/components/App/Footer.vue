@@ -1,6 +1,5 @@
 <template>
   <footer>
-    <div>
       <UContainer>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           <!-- Column 1: Logo & About -->
@@ -67,11 +66,7 @@
             />
           </div>
         </div>
-      </UContainer>
-    </div>
-    <div class="py-4">
-      <UContainer>
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-forest/90">
+        <div class="flex  py-4 flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-forest/90">
           <span> © {{ new Date().getFullYear() }} — {{ $t("footer.rights") }} <UButton
             :aria-label="$t('links.followUs', { platform: 'website' })"
             rel="noopener noreferrer"
@@ -106,7 +101,6 @@
           </p>
         </div>
       </UContainer>
-    </div>
   </footer>
 </template>
 

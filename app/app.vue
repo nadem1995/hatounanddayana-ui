@@ -1,5 +1,5 @@
 <template>
-  <UApp :locale="locales[locale]">
+  <UApp>
     <NuxtLoadingIndicator color="linear-gradient(to right, #07342f, #d5ba94)"
                           :height="2"  />
     <NuxtRouteAnnouncer />
@@ -11,23 +11,20 @@
 
 <script setup lang="ts">
 import * as locales from "@nuxt/ui/locale"
-
 const { locale, t } = useI18n()
 const config = useRuntimeConfig()
-
 const lang = computed(() => locale.value)
 const dir = computed(() => locales[locale.value].dir)
 const siteUrl = config.public.siteUrl || "https://hatounanddayana.com/"
 const siteName = computed(() => t('seo.app.appName'))
 const siteDescription = computed(() => t('seo.app.siteDescription'))
-
 useHead({
   htmlAttrs: {
     lang,
     dir,
   },
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} | ${siteName.value}` : siteName.value
+    return titleChunk ? `${titleChunk} - ${siteName.value}` : siteName.value
   },
   meta: [
     { name: 'theme-color', content: '#d5ba94' },
@@ -38,7 +35,6 @@ useHead({
   ],
   script: [
     {
-      type: 'application/ld+json',
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Organization',
@@ -47,7 +43,7 @@ useHead({
         logo: `${siteUrl}/logo.png`,
         contactPoint: {
           '@type': 'ContactPoint',
-          telephone: `+${config.public.phone}`,
+          telephone: `${config.public.phone}`,
           contactType: 'customer service',
           availableLanguage: ['Arabic', 'English'],
         },

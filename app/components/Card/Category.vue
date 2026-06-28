@@ -21,7 +21,7 @@
     <div class="absolute inset-0 bg-brand-forest/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
     <!-- Top: index number -->
-    <div class="absolute start-0 m-2 flex items-center justify-between">
+    <div class="absolute start-0 m-2 flex items-center justify-center">
       <span class="text-xs text-primary tracking-[0.1em] p-2 rounded-full bg-brand-forest/70">
         {{ String(index + 1).padStart(2, '0') }}
       </span>
