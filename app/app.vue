@@ -22,7 +22,6 @@ const siteUrl = config.public.siteUrl || "https://hatounanddayana.com"
 
 useHead({
   htmlAttrs: {
-    // ✅ These must match exactly between server and client
     lang: () => locale.value,
     dir: () => locale.value === 'ar' ? 'rtl' : 'ltr',
   },
@@ -31,11 +30,15 @@ useHead({
     return titleChunk ? `${titleChunk} - ${name}` : name
   },
   meta: [
-    { name: 'theme-color', content: '#d5ba94' },
+    { name: 'theme-color', content: '#07342f' },
+    { name: 'robots', content: 'index, follow' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { charset: 'utf-8' },
   ],
   link: [
     { rel: 'icon', type: 'image/png', href: '/favicon.png' },
     { rel: 'canonical', href: () => `${siteUrl}${route.path}` },
+
   ],
   script: [
     {

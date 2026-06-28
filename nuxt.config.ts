@@ -5,18 +5,6 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxt/image",
   ],
-
-  ssr: true,
-
-  nitro: {
-    prerender: {
-      failOnError: false,
-      autoSubfolderIndex: false,
-      crawlLinks: false,
-      routes: []
-    }
-  },
-
   runtimeConfig: {
     public: {
       apiBase: process.env.NUXT_PUBLIC_API_BASE || "https://api.hatounanddayana.com/api",
@@ -24,9 +12,7 @@ export default defineNuxtConfig({
       phone: "+963983129860",
     },
   },
-
   devtools: { enabled: false },
-
   app: {
     head: {
       htmlAttrs: {
@@ -44,26 +30,7 @@ export default defineNuxtConfig({
     ],
     defaultLocale: "ar",
     strategy: "no_prefix",
-    skipSettingLocaleOnNavigate: false,
-    detectBrowserLanguage: {
-      useCookie: true,
-      redirectOn: "root",
-      fallbackLocale: "ar",
-      alwaysRedirect: false,
-      cookieCrossOrigin: false,
-    },
   },
-
   css: ["~/assets/css/main.css"],
-
   compatibilityDate: "2025-01-15",
-
-  eslint: {
-    config: {
-      stylistic: {
-        commaDangle: "never",
-        braceStyle: "1tbs",
-      },
-    },
-  },
 })

@@ -1,5 +1,3 @@
-<script setup lang="ts">
-</script>
 <template>
   <NuxtLink
     to="/products"
@@ -51,3 +49,6 @@
     </div>
   </NuxtLink>
 </template>
+
+
+
