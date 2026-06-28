@@ -1,23 +1,37 @@
 <template>
   <UApp :locale="locales[locale]">
-    <NuxtLoadingIndicator color="linear-gradient(to right, #07342f, #d5ba94)"
-                          :height="2"  />
+    <NuxtLoadingIndicator
+      color="linear-gradient(to right, #07342f, #d5ba94)"
+      :height="2"
+    />
     <NuxtRouteAnnouncer />
     <NuxtLayout>
-      <NuxtPage/>
+      <NuxtPage />
     </NuxtLayout>
   </UApp>
 </template>
 
 <script setup lang="ts">
 import * as locales from "@nuxt/ui/locale"
+
 const { locale, t } = useI18n()
 const config = useRuntimeConfig()
+const route = useRoute()
+
+const siteUrl = config.public.siteUrl || "https://hatounanddayana.com"
+
 const lang = computed(() => locale.value)
 const dir = computed(() => locales[locale.value].dir)
-const siteUrl = config.public.siteUrl || "https://hatounanddayana.com/"
+const canonicalUrl = computed(() => `${siteUrl}${route.path}`)
+const ogLocale = computed(() => locale.value === 'ar' ? 'ar_SA' : 'en_US')
+
 const siteName = computed(() => t('seo.app.appName'))
 const siteDescription = computed(() => t('seo.app.siteDescription'))
+const ogTitle = computed(() => t('seo.app.ogTitle'))
+const ogDescription = computed(() => t('seo.app.ogDescription'))
+const twitterTitle = computed(() => t('seo.app.twitterTitle'))
+const twitterDescription = computed(() => t('seo.app.twitterDescription'))
+
 useHead({
   htmlAttrs: {
     lang,
@@ -31,12 +45,12 @@ useHead({
   ],
   link: [
     { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-    { rel: 'canonical', href: siteUrl },
+    { rel: 'canonical', href: canonicalUrl },
   ],
   script: [
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify({
+      innerHTML: computed(() => JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Organization',
         name: siteName.value,
@@ -49,9 +63,9 @@ useHead({
           availableLanguage: ['Arabic', 'English'],
         },
         sameAs: [
-           'https://www.instagram.com/hatoundayana',
+          'https://www.instagram.com/hatoundayana',
         ]
-      })
+      }))
     }
   ]
 })
@@ -59,16 +73,16 @@ useHead({
 useSeoMeta({
   title: siteName,
   description: siteDescription,
-  ogTitle: siteName,
-  ogDescription: siteDescription,
+  ogTitle,
+  ogDescription,
   ogImage: `${siteUrl}/og-image.jpg`,
-  ogUrl: siteUrl,
+  ogUrl: canonicalUrl,
   ogType: 'website',
   ogSiteName: siteName,
-  ogLocale: computed(() => locale.value === 'ar' ? 'ar_SA' : 'en_US'),
+  ogLocale,
   twitterCard: 'summary_large_image',
-  twitterTitle: siteName,
-  twitterDescription: siteDescription,
+  twitterTitle,
+  twitterDescription,
   twitterImage: `${siteUrl}/og-image.jpg`,
   robots: 'index, follow',
 })
