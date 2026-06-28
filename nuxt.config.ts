@@ -21,7 +21,7 @@ export default defineNuxtConfig({
       },
     },
   },
-
+ssr:true,
   i18n: {
     baseUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://hatounanddayana.com",
     locales: [
