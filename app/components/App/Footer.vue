@@ -86,7 +86,7 @@
               aria-hidden="true"
             />
             {{ $t("footer.by") }}
-            {{ $t("footer.desiner") }}
+            {{ $t("footer.designer") }}
             <UButton
               :aria-label="$t('links.followUs', { platform: 'website' })"
               rel="noopener noreferrer"

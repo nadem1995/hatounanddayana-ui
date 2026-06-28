@@ -1,5 +1,5 @@
 <template>
-  <UApp>
+  <UApp :locale="locales[locale]">
     <NuxtLoadingIndicator color="linear-gradient(to right, #07342f, #d5ba94)"
                           :height="2"  />
     <NuxtRouteAnnouncer />
