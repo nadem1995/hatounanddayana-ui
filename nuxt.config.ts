@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
   ],
 
-  ssr: false,
+  ssr: true,
 
   nitro: {
     prerender: {
@@ -39,30 +39,19 @@ export default defineNuxtConfig({
   i18n: {
     baseUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://hatounanddayana.com",
     locales: [
-      {
-        code: "en",
-        language: "en-US",
-        name: "English",
-        dir: "ltr",
-        file: "en.json",
-      },
-      {
-        code: "ar",
-        language: "ar-SA",
-        name: "العربية",
-        dir: "rtl",
-        file: "ar.json",
-      },
+      { code: "en", language: "en-US", name: "English", dir: "ltr", file: "en.json" },
+      { code: "ar", language: "ar-SA", name: "العربية", dir: "rtl", file: "ar.json" },
     ],
     defaultLocale: "ar",
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: "i18n_redirected",
-      redirectOn: "root",
-      fallbackLocale: "ar",
-    },
     strategy: "no_prefix",
     skipSettingLocaleOnNavigate: false,
+    detectBrowserLanguage: {
+      useCookie: true,
+      redirectOn: "root",
+      fallbackLocale: "ar",
+      alwaysRedirect: false,
+      cookieCrossOrigin: false,
+    },
   },
 
   css: ["~/assets/css/main.css"],

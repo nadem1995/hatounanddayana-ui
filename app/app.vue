@@ -20,32 +20,22 @@ const route = useRoute()
 
 const siteUrl = config.public.siteUrl || "https://hatounanddayana.com"
 
-const lang = computed(() => locale.value)
-const dir = computed(() => locales[locale.value].dir)
-const canonicalUrl = computed(() => `${siteUrl}${route.path}`)
-const ogLocale = computed(() => locale.value === 'ar' ? 'ar_SA' : 'en_US')
-
-const siteName = computed(() => t('seo.app.appName'))
-const siteDescription = computed(() => t('seo.app.siteDescription'))
-const ogTitle = computed(() => t('seo.app.ogTitle'))
-const ogDescription = computed(() => t('seo.app.ogDescription'))
-const twitterTitle = computed(() => t('seo.app.twitterTitle'))
-const twitterDescription = computed(() => t('seo.app.twitterDescription'))
-
 useHead({
   htmlAttrs: {
-    lang,
-    dir,
+    // ✅ These must match exactly between server and client
+    lang: () => locale.value,
+    dir: () => locale.value === 'ar' ? 'rtl' : 'ltr',
   },
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} - ${siteName.value}` : siteName.value
+    const name = t('seo.app.appName')
+    return titleChunk ? `${titleChunk} - ${name}` : name
   },
   meta: [
     { name: 'theme-color', content: '#d5ba94' },
   ],
   link: [
     { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-    { rel: 'canonical', href: canonicalUrl },
+    { rel: 'canonical', href: () => `${siteUrl}${route.path}` },
   ],
   script: [
     {
@@ -53,7 +43,7 @@ useHead({
       innerHTML: computed(() => JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: siteName.value,
+        name: t('seo.app.appName'),
         url: siteUrl,
         logo: `${siteUrl}/logo.png`,
         contactPoint: {
@@ -62,27 +52,25 @@ useHead({
           contactType: 'customer service',
           availableLanguage: ['Arabic', 'English'],
         },
-        sameAs: [
-          'https://www.instagram.com/hatoundayana',
-        ]
+        sameAs: ['https://www.instagram.com/hatoundayana']
       }))
     }
   ]
 })
 
 useSeoMeta({
-  title: siteName,
-  description: siteDescription,
-  ogTitle,
-  ogDescription,
+  title: () => t('seo.app.appName'),
+  description: () => t('seo.app.siteDescription'),
+  ogTitle: () => t('seo.app.ogTitle'),
+  ogDescription: () => t('seo.app.ogDescription'),
   ogImage: `${siteUrl}/og-image.jpg`,
-  ogUrl: canonicalUrl,
+  ogUrl: () => `${siteUrl}${route.path}`,
   ogType: 'website',
-  ogSiteName: siteName,
-  ogLocale,
+  ogSiteName: () => t('seo.app.appName'),
+  ogLocale: () => locale.value === 'ar' ? 'ar_SA' : 'en_US',
   twitterCard: 'summary_large_image',
-  twitterTitle,
-  twitterDescription,
+  twitterTitle: () => t('seo.app.twitterTitle'),
+  twitterDescription: () => t('seo.app.twitterDescription'),
   twitterImage: `${siteUrl}/og-image.jpg`,
   robots: 'index, follow',
 })
