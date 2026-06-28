@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxt/image",
   ],
+  ssr:false,
 
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || "https://hatounanddayana.com",
