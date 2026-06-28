@@ -5,21 +5,18 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxt/image",
   ],
-  ssr:false,
 
-  site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL || "https://hatounanddayana.com",
-  },
+  ssr: false,
 
   nitro: {
     prerender: {
       failOnError: false,
-      ignore: ['/about-us'],
       autoSubfolderIndex: false,
       crawlLinks: false,
-      routes: [] // ✅ no routes to prerender
+      routes: []
     }
   },
+
   runtimeConfig: {
     public: {
       apiBase: process.env.NUXT_PUBLIC_API_BASE || "https://api.hatounanddayana.com/api",
@@ -60,20 +57,15 @@ export default defineNuxtConfig({
     defaultLocale: "ar",
     detectBrowserLanguage: {
       useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root',
-      fallbackLocale: 'ar',
+      cookieKey: "i18n_redirected",
+      redirectOn: "root",
+      fallbackLocale: "ar",
     },
     strategy: "no_prefix",
+    skipSettingLocaleOnNavigate: false,
   },
 
   css: ["~/assets/css/main.css"],
-
-  routeRules: {
-    "/": { swr: 3600 },
-    "/about-us": { prerender: true },
-    "/products": { swr: 3600 },
-  },
 
   compatibilityDate: "2025-01-15",
 
@@ -85,4 +77,4 @@ export default defineNuxtConfig({
       },
     },
   },
-});
+})

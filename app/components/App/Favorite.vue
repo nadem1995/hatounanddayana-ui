@@ -1,5 +1,6 @@
 <template>
  <UButton
+   :aria-label="$t('seo.ariaLabels.myFavorites')"
   :to="{ name: 'products-favorite' }"
   variant="ghost"
   class="relative p-0 hover:bg-transparent"

@@ -17,6 +17,10 @@
   "best_seller": "Best Seller",
   "hero_image_alt": "Diana Products Hero Image",
   "seo": {
+    "ariaLabels": {
+      "myFavorites": "My Favorite Products",
+      "homeLogo": "Hatoun & Dayana - Go to Homepage"
+    },
     "app": {
       "appName": "Hatoun and Dayana",
       "siteDescription": "Shop the latest Islamic fashion & modern hijab collections — elegance that honors your values"

@@ -9,6 +9,7 @@
     loading="eager"
     fetchpriority="high"
     @error="onImageError()"
+    alt="Hero image Hatoun and dayana"
   />
 
 

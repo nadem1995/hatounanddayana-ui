@@ -7,7 +7,7 @@
   >
     <template #left>
 <!--      <TemplateMenu class="lg:hidden" />-->
-      <NuxtLink :to="{ name: 'index' }">
+      <NuxtLink :aria-label="$t('seo.ariaLabels.homeLogo')" :to="{ name: 'index' }">
         <AppLogo class="w-auto h-6 shrink-0" />
       </NuxtLink>
     </template>
