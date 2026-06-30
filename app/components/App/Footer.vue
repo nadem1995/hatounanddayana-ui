@@ -26,7 +26,7 @@
             v-if="informationLinks"
             :title="$t('informations')" :links="informationLinks.map(page => ({
       label: page.title,
-      to: {name:'pages',params:{slug:page.slug}}
+      to: { name: 'pages-slug', params: { slug: page.slug } }
     }))"
           />
           <div
