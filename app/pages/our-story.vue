@@ -1,5 +1,5 @@
 <template>
-  <div class="text-brand-forest">
+  <div class="text-brand-forest xs:space-y-20 spce-y-10">
     <!-- HERO -->
     <AppPageBanner
       :title="$t('ourStory.title')"
@@ -8,24 +8,14 @@
     />
 
     <!-- HERO SECTION (SVG ONLY) -->
-    <section class="relative overflow-hidden py-15">
-      <!-- gold glow -->
-      <div
-        class="absolute top-0 left-1/2 -translate-x-1/2 w-full blur-[120px]"
-      />
-
-      <div class="relative max-w-4xl mx-auto text-center px-6">
-        <AppSectionTitle :title="$t('about.hero.title')" />
-
-        <p class="text-lg max-w-xl mx-auto">
-          {{ t("about.hero.description") }}
-        </p>
-      </div>
+    <section>
+      <AppSectionTitle :title="$t('about.hero.title')" />
+      <p class="xs:text-lg max-w-lg mx-auto text-center text-brand-forest/90">
+        {{ t("about.hero.description") }}
+      </p>
     </section>
 
-    <!-- WHO WE ARE -->
-    <section class="relative py-15">
-      <!-- SVG wave divider -->
+    <section class="relative">
       <svg
         class="absolute top-0 left-0 w-full h-20 opacity-15"
         viewBox="0 0 1200 80"
@@ -39,21 +29,17 @@
           fill="none"
         />
       </svg>
-
       <div
-        class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center"
+        class="max-w-6xl mx-auto pt-10  px-6 grid md:grid-cols-2 gap-16 items-center"
       >
         <!-- TEXT -->
-        <div>
-          <span class="text-xs uppercase tracking-[0.3em]">
-            {{ t("about.whoWeAre.headline") }}
-          </span>
+        <div class="">
 
-          <h2 class="text-4xl font-bold mt-4">
+          <h2 class="text-4xl font-bold mb-2">
             {{ t("about.whoWeAre.title") }}
           </h2>
 
-          <p class="mt-6 leading-relaxed">
+          <p class="xs:text-lg max-w-lg mx-auto text-brand-forest/90">
             {{ t("about.whoWeAre.description") }}
           </p>
 
@@ -117,15 +103,11 @@
         class="absolute bg-pattern-crosshatch inset-0 opacity-[0.07]"
       />
       <div class="relative max-w-5xl mx-auto text-center px-6">
-        <h2 class="text-4xl font-bold">
-          {{ t("about.philosophy.title") }}
-        </h2>
-
-        <p class="mt-4 mb-16">
+        <AppSectionTitle :title="$t('about.philosophy.title')" />
+        <p class="xs:text-lg max-w-lg mx-auto text-brand-forest/90">
           {{ t("about.philosophy.description") }}
         </p>
-
-        <div class="grid md:grid-cols-3 gap-6">
+        <div class="grid md:grid-cols-3 xs:mt-8 mt-5 gap-6">
           <CardFeature
             v-for="feature in features"
             :key="feature.id"
@@ -137,21 +119,12 @@
 
     <!-- CTA -->
     <section class="py-15 text-center">
-      <h2 class="text-4xl font-bold">
-        {{ t("about.cta.title") }}
-      </h2>
-
-      <p class="mt-4 max-w-xl mx-auto">
+      <AppSectionTitle :title="t('about.cta.title')" />
+      <p class="xs:text-lg max-w-lg mt-5 mx-auto text-brand-forest/90">
         {{ t("about.cta.description") }}
       </p>
-
       <div class="flex gap-4 justify-center mt-10">
-        <UButton :label="$t('about.cta.shopNow')" size="lg" />
-        <UButton
-          variant="outline"
-          :label="$t('about.cta.contactUs')"
-          size="lg"
-        />
+        <UButton class="bg-brand-forest hover:bg-brand-forest/90" icon="i-lucide-shopping-bag" :to="{name:'products'}" :label="$t('about.cta.shopNow')" size="xl" />
       </div>
     </section>
   </div>
@@ -161,12 +134,6 @@
 import type { BreadcrumbItem } from "@nuxt/ui";
 const { t } = useI18n();
 
-const stats = [
-  { value: "500+", label: "Products" },
-  { value: "2K+", label: "Happy Customers" },
-  { value: "2", label: "Sisters" },
-  { value: "100%", label: "With Love" },
-];
 
 const features = computed(() => [
   {
@@ -189,23 +156,6 @@ const features = computed(() => [
   },
 ]);
 
-const philosophyCards = computed(() => [
-  {
-    icon: "i-lucide-hand-heart",
-    title: t("about.whoWeAre.features.passion.title"),
-    description: t("about.whoWeAre.features.passion.description"),
-  },
-  {
-    icon: "i-lucide-gem",
-    title: t("about.whoWeAre.features.quality.title"),
-    description: t("about.whoWeAre.features.quality.description"),
-  },
-  {
-    icon: "i-lucide-wand",
-    title: t("about.whoWeAre.features.elegance.title"),
-    description: t("about.whoWeAre.features.elegance.description"),
-  },
-]);
 
 const items = computed<BreadcrumbItem[]>(() => [
   {
