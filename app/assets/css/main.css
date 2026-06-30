@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+
 @keyframes heartbeat {
   0%,
   100% {
@@ -61,5 +62,5 @@
 }
 
 body {
-  @apply bg-primary; 
+  @apply bg-primary;
 }

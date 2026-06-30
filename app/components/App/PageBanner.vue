@@ -33,7 +33,7 @@
 import type { BreadcrumbItem } from "@nuxt/ui";
 defineProps<{
   title: string;
-  subtitle: string;
+  subtitle?: string;
   breadcrumbItems: BreadcrumbItem[];
 }>();
 </script>
