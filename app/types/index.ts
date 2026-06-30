@@ -28,9 +28,17 @@ export interface Slide {
   alt?: string;
 }
 
-export interface feature {
+export interface Feature {
   id: number;
   icon: string;
   title: string;
   description: string;
+}
+
+
+export interface Page {
+  id: number;
+  title: string;
+  content: string;
+  slug: string;
 }

@@ -13,6 +13,7 @@
                 loading="lazy"
               />
             </NuxtLink>
+            {{data}}
             <p class="text-md text-brand-forest">
               {{ $t("footer.about.line1") }}
             </p>
@@ -21,7 +22,13 @@
             </p>
           </div>
           <AppFooterColumn :title="$t('usefulLinks')" :links="usefulLinks" />
-          <AppFooterColumn :title="$t('informations')" :links="infoLinks" />
+          <AppFooterColumn
+            v-if="informationLinks"
+            :title="$t('informations')" :links="informationLinks.map(page => ({
+      label: page.title,
+      to: {name:'pages',params:{slug:page.slug}}
+    }))"
+          />
           <div
             class="backdrop-blur-md bg-brand-forest/5 border border-brand-forest/15 rounded-2xl p-4"
           >
@@ -106,12 +113,11 @@
 
 <script setup lang="ts">
 import type { NavigationMenuItem } from "@nuxt/ui";
+import type {Page} from "~/types";
 const { t } = useI18n();
 const route = useRoute();
-
 const appConfig = useRuntimeConfig().public;
 const phone: string = appConfig.phone;
-
 const usefulLinks = computed<NavigationMenuItem[]>(() => [
   {
     label: t("links.homePage"),
@@ -129,25 +135,10 @@ const usefulLinks = computed<NavigationMenuItem[]>(() => [
     active: route.name?.toString().startsWith("our-story"),
   },
 ]);
-
-const infoLinks = computed<NavigationMenuItem[]>(() => [
-  {
-    label: t("links.faq"),
-    to: { name: "faq" },
-    active: route.name?.toString().startsWith("faq"),
-  },
-  {
-    label: t("links.privacyPolicy"),
-    to: { name: "privacy-policy" },
-    active: route.name?.toString().startsWith("privacy-policy"),
-  },
-  {
-    label: t("links.termsOfService"),
-    to: { name: "terms" },
-    active: route.name?.toString().startsWith("terms"),
-  },
-]);
-
-
 const NJATAZHATI='https://www.instagram.com/designer.njatazhri?igsh=MTcxa2JzZ2dwcDV6ag==https://www.instagram.com/designer.njatazhri?igsh=MTcxa2JzZ2dwcDV6ag=='
+
+const props = defineProps<{
+  informationLinks: Page[]
+}>()
+
 </script>

@@ -19,7 +19,8 @@
       />
     </svg>
   </UMain>
-  <AppFooter />
+  {{data}}
+  <AppFooter :informationLinks="data.pages || []"  />
 </template>
 <script setup>
 const { data } = await useApiFetch("/layout-data");
