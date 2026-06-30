@@ -13,13 +13,7 @@
     </template>
 
     <template #default>
-      <UNavigationMenu
-        variant="link"
-        :items="items"
-        :ui="{
-          link: 'text-[18px] text-brand-forest [&[aria-current=page]]:border-b-1 [&[aria-current=page]]:border-brand-forest',
-        }"
-      />
+      <UNavigationMenu :items="items" />
     </template>
 
     <template #right>
