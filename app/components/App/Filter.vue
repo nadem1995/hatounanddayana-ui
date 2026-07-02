@@ -6,7 +6,7 @@
       <div class="relative overflow-hidden bg-primary px-6 py-5">
         <div
           class="absolute bg-pattern-crosshatch inset-0 "
-          
+
         />
 
         <div class="relative flex items-center gap-3">
@@ -28,7 +28,6 @@
           <aside class="space-y-5">
             <FilterSearch />
             <FilterCategory :categories="categories" />
-            <FilterBestSellers />
             <FilterPrice />
 
             <UButton

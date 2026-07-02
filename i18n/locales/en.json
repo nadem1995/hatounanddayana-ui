@@ -3,7 +3,7 @@
   "usefulLinks": "Useful Links",
   "myFavoriteProducts": "My Favorite Products",
   "whatsapp": {
-    "message": "Hello! I'm interested in *{name}*\nPrice: ${price}\n{url}"
+    "message": "Hello! I'm interested in *{name}*\nPrice:  S.Y {price}\n{url}"
   },
   "addToFavorites": "Add to Favorites",
   "removeFromFavorites": "Remove from Favorites",
@@ -194,5 +194,6 @@
   "collection": {
     "title": "Our New Collection",
     "description": "Our latest collection has arrived — elegant pieces that blend authenticity with modern style."
-  }
+  },
+  "currency": "S.Y"
 }

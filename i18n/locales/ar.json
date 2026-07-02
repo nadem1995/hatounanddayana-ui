@@ -4,7 +4,7 @@
   "usefulLinks": "روابط مفيدة",
   "myFavoriteProducts": "منتجاتي المفضلة",
   "whatsapp": {
-    "message": "مرحباً! أنا مهتم بـ *{name}*\nالسعر: ${price}\n{url}"
+    "message": "مرحباً! أنا مهتم بـ *{name}*\nالسعر:  ل.س {price}\n{url}"
   },
   "addToFavorites": "إضافة إلى المفضلة",
   "removeFromFavorites": "إزالة من المفضلة",
@@ -192,5 +192,6 @@
   "collection": {
     "title": "تشكيلتنا الجديدة",
     "description": " تشكيلتنا الجديدة وصلت — قطع راقية تجمع بين الأصالة والعصرية."
-  }
+  },
+  "currency": "ل.س"
 }
