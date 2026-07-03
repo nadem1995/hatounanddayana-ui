@@ -90,7 +90,7 @@ useSeoMeta({
   ogDescription: t("seo.products.description"),
 });
 
-const { data, status } = await useApiFetch("products", {
+const { data } = await useApiFetch("products", {
   query: computed(() => route.query),
 });
 
