@@ -7,10 +7,46 @@
     />
 
     <UContainer class="py-12">
-      <div class="flex flex-col lg:flex-row gap-8">
-        <AppFilter v-if="data?.categories?.length" :categories="data.categories" />
+      <!-- Mobile filter trigger -->
+      <div class="mb-5 flex justify-start lg:hidden">
+        <UButton
+          icon="i-lucide-filter"
+          class="rounded-2xl bg-brand-forest"
+          variant="soft"
+          color="neutral"
+          :label="$t('filter.title')"
+          @click="isFilterOpen = true"
+        />
+      </div>
+
+      <div class="grid grid-cols-1 gap-5 lg:grid-cols-4">
+        <!-- Desktop sidebar filter -->
+        <AppFilter
+          v-if="data?.categories?.length"
+          :categories="data.categories"
+          class="hidden lg:block"
+        />
+
+        <!-- Mobile filter slideover -->
+        <USlideover
+          class="bg-primary"
+          v-model:open="isFilterOpen"
+          side="left"
+          :ui="{
+              title: 'text-brand-forest z-10 relative',
+            }"
+          :title="$t('filter.title')"
+        >
+          <template #body>
+            <AppFilter
+              v-if="data?.categories?.length"
+              :categories="data.categories"
+            />
+          </template>
+        </USlideover>
+
         <!-- PRODUCTS -->
-        <div class="flex-1">
+        <div class="col-span-1 lg:col-span-3">
           <!-- Empty -->
           <div
             v-if="!data?.products?.length"
@@ -30,14 +66,15 @@
             </p>
 
             <UButton
-              class="mt-6 bg-brand-forest  text-primary hover:bg-brand-forest/90 transition-colors duration-200 "
+              class="mt-6 bg-brand-forest text-primary hover:bg-brand-forest/90 transition-colors duration-200"
               :to="{ name: 'products' }"
               :label="$t('filter.reset')"
             />
           </div>
+
           <!-- Products -->
           <template v-else>
-            <div class="grid gap-2 grid-cols-2 md:gap-7 md:grid-cols-3">
+            <div class="grid gap-2 grid-cols-2 md:gap-5 md:grid-cols-3">
               <CardProduct
                 v-for="(product, i) in data.products"
                 :key="product.id"
@@ -79,9 +116,12 @@
 </template>
 
 <script setup lang="ts">
-import type { BreadcrumbItem } from "@nuxt/ui";
+import type {BreadcrumbItem} from "@nuxt/ui";
+
 const route = useRoute();
-const { t } = useI18n();
+const {t} = useI18n();
+
+const isFilterOpen = ref(false);
 
 useSeoMeta({
   title: t("seo.products.title"),
@@ -90,23 +130,31 @@ useSeoMeta({
   ogDescription: t("seo.products.description"),
 });
 
-const { data } = await useApiFetch("products", {
+const {data} = await useApiFetch("products", {
   query: computed(() => route.query),
 });
 
 watch(
   () => route.query.page,
-  () => window.scrollTo({ top: 0, behavior: "smooth" }),
+  () => window.scrollTo({top: 0, behavior: "smooth"}),
+);
+
+// Close the mobile filter slideover automatically when filters change
+watch(
+  () => route.query,
+  () => {
+    isFilterOpen.value = false;
+  },
 );
 
 const items = computed<BreadcrumbItem[]>(() => [
   {
     label: t("links.homePage"),
-    to: { name: "index" },
+    to: {name: "index"},
   },
   {
     label: t("links.ourProducts"),
-    to: { name: "products" },
+    to: {name: "products"},
   },
 ]);
 </script>

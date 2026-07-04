@@ -1,11 +1,21 @@
 <template>
   <USelect
-    icon="i-lucide-arrow-up-down"
     v-model="selectedSort"
+    icon="i-lucide-arrow-up-down"
     :items="sortOptions"
     value-key="value"
     label-key="label"
-    class="w-full mb-5"
+    color="primary"
+    variant="soft"
+    size="lg"
+    class="w-full"
+    :ui="{
+      base: 'bg-primary text-brand-forest rounded-lg font-medium shadow-sm ring-0 focus:ring-2 focus:ring-primary/50 transition-all',
+      leadingIcon: 'text-brand-forest',
+      trailingIcon: 'text-brand-forest',
+      item: 'text-brand-forest data-highlighted:bg-primary/10',
+      content: 'bg-primary border border-brand-forest/10 rounded-lg shadow-lg'
+    }"
   />
 </template>
 
@@ -19,19 +29,18 @@ const sortOptions = computed(() => [
   { label: t('oldest'), value: 'oldest' },
   { label: t('price_low_to_high'), value: 'price_asc' },
   { label: t('price_high_to_low'), value: 'price_desc' },
-])
+]);
 
-const selectedSort = ref<string>((route.query.sort as string) ?? "latest");
+const selectedSort = ref<string>((route.query.sort as string) ?? 'latest');
 
 watch(selectedSort, (val) => {
   updateQuery({ sort: val });
 });
 
-// Reset when query is cleared
 watch(
-  () => route.query["sort"],
+  () => route.query['sort'],
   (val) => {
-    if (!val) selectedSort.value = "";
+    if (!val) selectedSort.value = '';
   },
 );
 </script>

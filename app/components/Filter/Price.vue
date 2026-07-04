@@ -13,6 +13,7 @@
       :min-steps-between-thumbs="STEP"
       tooltip
       class="w-full"
+      :ui="{ range: 'bg-brand-forest' }"
     />
   </div>
 </template>
