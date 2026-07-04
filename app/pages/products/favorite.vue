@@ -1,4 +1,9 @@
 <template>
+  <AppPageBanner
+    :title="$t('favorites.title')"
+    :subtitle="$t('favorites.subtitle')"
+    :breadcrumbItems="items"
+  />
   <div
     v-if="data.products.length"
     class="grid pt-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
@@ -9,29 +14,35 @@
       :product="product"
     />
   </div>
-
   <div
     v-else
     class="flex px-5 xs:px-0 items-center justify-center mx-auto h-100"
   >
     <UEmpty
+      size="xl"
       icon="i-lucide-heart"
-      title="No favorites yet"
-      description="You haven't added any products to your favorites yet."
+      class="border rounded-2xl bg-brand-forest/10 border-brand-forest"
+      :title="$t('favorites.noFavorites')"
+      :description="$t('favorites.noFavoritesDescription')"
       :actions="[
         {
-          label: 'Browse Products',
+          label:$t('links.shopNow'),
           icon: 'i-lucide-shopping-bag',
+          class:' bg-brand-forest/90 text-primary rounded-2xl hover:bg-brand-forest',
           to: { name: 'products' },
         },
       ]"
     >
-  
+
   </UEmpty>
   </div>
 </template>
 
 <script setup lang="ts">
+import type {BreadcrumbItem} from "@nuxt/ui";
+
+const {t} = useI18n();
+
 const { favorites } = useFavorites();
 
 const { data } = await useApiFetch("/products/favorites", {
@@ -40,4 +51,22 @@ const { data } = await useApiFetch("/products/favorites", {
     favorites,
   },
 });
+
+
+const items = computed<BreadcrumbItem[]>(() => [
+  {
+    label: t("links.homePage"),
+    to: {name: "index"},
+  },
+  {
+    label: t("links.ourProducts"),
+    to: {name: "products"},
+  },
+
+  {
+    label: t("favorites.title"),
+    to: {name: "products-favorite"},
+  },
+]);
+
 </script>
