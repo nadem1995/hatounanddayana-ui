@@ -17,6 +17,12 @@ const {t} = useI18n();
 useSeoMeta({
   title: () => t("seo.home.title"),
   description: () => t("seo.home.description"),
-});
+  ogTitle: () => t("seo.home.title"),
+  ogDescription: () => t("seo.home.description"),
+  ogImage: `${useRuntimeConfig().public.siteUrl}/og-image-home.jpg`, // optional: home-specific image
+  twitterTitle: () => t("seo.home.title"),
+  twitterDescription: () => t("seo.home.description"),
+  twitterImage: `${useRuntimeConfig().public.siteUrl}/og-image-home.jpg`,
+})
 const {data} = await useApiFetch("/home");
 </script>

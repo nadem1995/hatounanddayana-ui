@@ -4,27 +4,29 @@
     :subtitle="$t('favorites.subtitle')"
     :breadcrumbItems="items"
   />
-  <div
-    v-if="data.products.length"
-    class="grid pt-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
-  >
-    <CardProduct
-      v-for="product in data.products"
-      :key="product.id"
-      :product="product"
-    />
-  </div>
-  <div
-    v-else
-    class="flex px-5 xs:px-0 items-center justify-center mx-auto h-100"
-  >
-    <UEmpty
-      size="xl"
-      icon="i-lucide-heart"
-      class="border rounded-2xl bg-brand-forest/10 border-brand-forest"
-      :title="$t('favorites.noFavorites')"
-      :description="$t('favorites.noFavoritesDescription')"
-      :actions="[
+  <UContainer class="lg:my-15 my-10" >
+    <div
+      v-if="data.products.length"
+      class="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
+    >
+      <CardProduct
+        v-for="product in data.products"
+        :key="product.id"
+        :product="product"
+      />
+    </div>
+
+    <div
+      v-else
+      class="flex px-5 xs:px-0 items-center justify-center mx-auto h-100"
+    >
+      <UEmpty
+        size="xl"
+        icon="i-lucide-heart"
+        class="border rounded-2xl bg-brand-forest/10 border-brand-forest"
+        :title="$t('favorites.noFavorites')"
+        :description="$t('favorites.noFavoritesDescription')"
+        :actions="[
         {
           label:$t('links.shopNow'),
           icon: 'i-lucide-shopping-bag',
@@ -32,10 +34,15 @@
           to: { name: 'products' },
         },
       ]"
-    >
+      >
 
-  </UEmpty>
-  </div>
+      </UEmpty>
+    </div>
+
+
+
+  </UContainer>
+
 </template>
 
 <script setup lang="ts">

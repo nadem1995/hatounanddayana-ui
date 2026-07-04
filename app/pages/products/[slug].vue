@@ -1,7 +1,6 @@
 <template>
   <section class="min-h-screen bg-primary">
     <AppPageBanner :title="product.name" :breadcrumbItems="items"/>
-
     <UContainer class="py-12">
       <article
         itemscope
@@ -145,20 +144,18 @@
           </div>
         </div>
       </article>
-
       <section class="lg:mt-20 mt-10" v-if="data.related_products.length">
         <AppSectionTitle :title="$t('relatedProducts')"/>
         <UCarousel
           v-slot="{ item }"
+          :autoplay="{ delay: 2000 }"
           :items="data.related_products"
           :ui="{ item: 'sm:basis-1/3 lg:basis-1/5 basis-1/2' }"
-          arrows
         >
           <CardProduct :product="item" :key="item.id" />
         </UCarousel>
       </section>
     </UContainer>
-
     <UModal v-model:open="isZoomOpen" fullscreen>
       <template #content>
         <div class="relative w-full h-full flex items-center justify-center bg-black/95">
