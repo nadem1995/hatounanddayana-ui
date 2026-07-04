@@ -2,9 +2,8 @@
   <div class="flex flex-col gap-3">
     <p class="font-bold text-brand-forest pb-1 w-max border-b">{{ title }}</p>
     <UNavigationMenu
-      highlight
       :ui="{
-        link: 'text-base font-semibold text-brand-forest',
+        link: 'text-brand-forest bg-primary w-max',
         linkLeadingIcon: 'text-brand-forest/60',
       }"
       :items="links"
