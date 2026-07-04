@@ -15,7 +15,6 @@
         :product="product"
       />
     </div>
-
     <div
       v-else
       class="flex px-5 xs:px-0 items-center justify-center mx-auto h-100"
@@ -38,11 +37,7 @@
 
       </UEmpty>
     </div>
-
-
-
   </UContainer>
-
 </template>
 
 <script setup lang="ts">

@@ -139,7 +139,6 @@ watch(
   () => window.scrollTo({top: 0, behavior: "smooth"}),
 );
 
-// Close the mobile filter slideover automatically when filters change
 watch(
   () => route.query,
   () => {
