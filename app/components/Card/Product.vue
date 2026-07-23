@@ -1,6 +1,6 @@
 <template>
   <article
-    class="group relative flex flex-col justify-between overflow-hidden rounded-2xl backdrop-blur-xl bg-brand-forest/10 border border-brand-forest/20 hover:border-brand-forest/50 hover:-translate-y-1 transition-all duration-300"
+    class="group  relative flex flex-col justify-between overflow-hidden rounded-2xl backdrop-blur-xl shadow-lg bg-brand-forest/10 border border-brand-forest/20 hover:border-brand-forest/50 hover:-translate-y-1 transition-all duration-300"
     itemscope
     itemtype="https://schema.org/Product"
     itemid="`${appConfig.siteUrl}/products/${product.slug}`"

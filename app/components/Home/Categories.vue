@@ -1,9 +1,9 @@
 <template>
   <section class="relative overflow-hidden bg-primary">
     <UContainer>
-  <AppSectionTitle
+<!--  <AppSectionTitle
     :title="$t('sections.categories.title')"
-  />
+  />-->
   <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 justify-center">
     <div class="col-span-1 md:col-span-1 lg:col-span-2 lg:row-span-2">
       <CardCategory
@@ -37,7 +37,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Category } from "app/types";
+import type { Category } from "~/types";
 defineProps<{
   categories: Category[];
 }>();

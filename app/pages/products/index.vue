@@ -11,7 +11,7 @@
       <div class="mb-5 flex justify-start lg:hidden">
         <UButton
           icon="i-lucide-filter"
-          class="rounded-2xl bg-brand-forest"
+          class="rounded-2xl text-primary bg-brand-forest"
           variant="soft"
           color="neutral"
           :label="$t('filter.title')"
@@ -83,7 +83,7 @@
             </div>
 
             <!-- Pagination -->
-            <div class="mt-14 flex justify-center">
+            <div v-if="data.meta.total>9" class="mt-14 flex justify-center">
               <UPagination
                 v-model:page="data.meta.current_page"
                 :total="data.meta.total"

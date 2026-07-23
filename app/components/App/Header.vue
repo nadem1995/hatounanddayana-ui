@@ -6,7 +6,6 @@
     }"
   >
     <template #left>
-<!--      <TemplateMenu class="lg:hidden" />-->
       <NuxtLink :aria-label="$t('seo.ariaLabels.homeLogo')" :to="{ name: 'index' }">
         <NuxtImg
           width="80"

@@ -30,7 +30,7 @@ useHead({
     return titleChunk ? `${titleChunk} - ${name}` : name
   },
   meta: [
-    { name: 'theme-color', content: '#07342f' },
+    { name: 'theme-color', content: '#f3e8dc' },
     { name: 'robots', content: 'index, follow' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { charset: 'utf-8' },
