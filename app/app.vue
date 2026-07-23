@@ -66,7 +66,7 @@ useSeoMeta({
   description: () => t('seo.app.siteDescription'),
   ogTitle: () => t('seo.app.ogTitle'),
   ogDescription: () => t('seo.app.ogDescription'),
-  ogImage: `${siteUrl}/og-image.jpg`,
+  ogImage: `${siteUrl}/public/images/logo/logo2.png`,
   ogUrl: () => `${siteUrl}${route.path}`,
   ogType: 'website',
   ogSiteName: () => t('seo.app.appName'),
