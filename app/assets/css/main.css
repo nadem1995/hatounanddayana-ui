@@ -27,13 +27,13 @@
 @theme static {
   --font-sans: "Tajawal", sans-serif;
   --color-brand-cream: #f1e7db;
-  --color-brand-main: #07342f;
-  --color-brand-forest: #d5ba94;
+  --color-brand-main: #f3e8dc;
+  --color-brand-forest: #07342f;
 }
 
 :root,
 .light {
-  --ui-primary: #07342f;
+  --ui-primary: #f3e8dc;
 }
 
 .dark {
