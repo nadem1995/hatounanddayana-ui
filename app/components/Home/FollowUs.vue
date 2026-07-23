@@ -79,7 +79,7 @@
 
             <!-- Small 2 -->
             <NuxtImg
-              src="images/followUsSection/image1.png"
+              src="images/followUsSection/image2.png"
               :alt="$t('seo.app.appName')"
               width="200"
               height="200"
