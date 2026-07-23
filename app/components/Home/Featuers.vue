@@ -9,7 +9,6 @@
         <p class="text-brand-forest/90 xs:text-lg max-w-xs">
           {{ $t("features.subTitle1") }} <br />
           {{ $t("features.subTitle2") }}
-          ?
         </p>
       </div>
       <div class="grid md:grid-cols-3 gap-6">

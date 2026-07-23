@@ -16,7 +16,7 @@
     </div>
 
     <!-- Divider -->
-    <div class="h-px sm:my-6 my-2 bg-primary/20" />
+    <div class="h-px sm:my-6 my-2 bg-brand-forest/20" />
 
     <!-- Text -->
     <div class="space-y-1 text-center">

@@ -46,13 +46,13 @@
           <div class="grid grid-cols-3 gap-2 sm:gap-3 h-full">
             <!-- Tall left -->
             <NuxtImg
-              src="images/placeholders/200x400.webp"
+              src="images/followUsSection/image1.png"
               :alt="$t('seo.app.appName')"
               width="200"
               height="420"
               format="webp"
               loading="lazy"
-              class="col-span-1 row-span-2 h-auto w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
+              class="col-span-1 row-span-2 h-auto w-full rounded-xl sm:rounded-2xl object-cover  transition-all duration-500 hover:scale-[1.02]"
             />
 
             <!-- Top wide -->
@@ -63,29 +63,29 @@
               height="200"
               format="webp"
               loading="lazy"
-              class="col-span-2 h-auto  w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
+              class="col-span-2 h-auto  w-full rounded-xl sm:rounded-2xl object-cover  transition-all duration-500 hover:scale-[1.02]"
             />
 
             <!-- Small 1 -->
             <NuxtImg
-              src="images/placeholders/200.webp"
+              src="images/followUsSection/image1.png"
               :alt="$t('seo.app.appName')"
               width="200"
               height="200"
               format="webp"
               loading="lazy"
-              class="h-auto w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
+              class="h-auto w-full rounded-xl sm:rounded-2xl object-cover  transition-all duration-500 hover:scale-[1.02]"
             />
 
             <!-- Small 2 -->
             <NuxtImg
-              src="images/placeholders/200.webp"
+              src="images/followUsSection/image1.png"
               :alt="$t('seo.app.appName')"
               width="200"
               height="200"
               format="webp"
               loading="lazy"
-              class="h-auto w-full rounded-xl sm:rounded-2xl object-cover brightness-90 hover:brightness-100 transition-all duration-500 hover:scale-[1.02]"
+              class="h-auto w-full rounded-xl sm:rounded-2xl object-cover  transition-all duration-500 hover:scale-[1.02]"
             />
           </div>
         </div>

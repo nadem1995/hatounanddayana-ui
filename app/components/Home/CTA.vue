@@ -1,9 +1,10 @@
-<script setup lang="ts">
-</script>
 <template>
+
+  <br>
+  <br>
   <NuxtLink
     :to="{name:'products'}"
-    class="group relative overflow-hidden rounded-2xl cursor-pointer flex items-end min-h-55 shadow-lg hover:shadow-2xl transition duration-700"
+    class="group relative  overflow-hidden rounded-2xl cursor-pointer flex items-end min-h-55 shadow-lg transition duration-700"
   >
     <NuxtImg
       src="images/followUsSection/image1.png"
@@ -13,10 +14,6 @@
       format="webp"
       loading="lazy"
       class="absolute inset-0 w-full h-full object-cover transition duration-1000 group-hover:scale-104"
-    />
-    <div
-      :aria-hidden="true"
-      class="absolute bg-pattern-crosshatch inset-0 opacity-[0.1] mix-blend-overlay"
     />
     <!-- Main content -->
     <div
@@ -45,11 +42,18 @@
     <!-- Bottom progress bar animation on hover -->
     <div class="absolute bottom-0 inset-x-0 h-0.5 bg-white/10">
       <div
-        class="h-full w-0 group-hover:w-full bg-brand-forest transition-all duration-1500 ease-out"
+        class="h-full w-0 group-hover:w-full bg-brand-forest/20 transition-all duration-1500 ease-out"
       />
     </div>
   </NuxtLink>
+
+  <br>
+  <br>
+  <br>
 </template>
 
+
+<script setup lang="ts">
+</script>
 
 
