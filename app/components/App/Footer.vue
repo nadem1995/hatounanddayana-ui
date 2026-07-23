@@ -6,9 +6,9 @@
           <div class="flex flex-col gap-4">
             <NuxtLink :to="{ name: 'index' }">
               <NuxtImg
-                width="100"
-                height="100"
-                src="/images/logo/80x80.svg"
+                width="120"
+                height="120"
+                src="/images/logo/logo2.png"
                 alt="logo"
                 loading="lazy"
               />
@@ -34,9 +34,9 @@
             <!-- Header -->
             <div class="relative flex items-center gap-3">
               <div
-                class="flex size-12 items-center justify-center rounded-2xl bg-primary/50"
+                class="flex size-10 items-center justify-center rounded-2xl bg-primary/50"
               >
-                <UIcon name="i-mdi-whatsapp" class="size-8 text-green-600" />
+                <UIcon name="i-mdi-whatsapp" class="size-6 text-green-600" />
               </div>
 
               <div>
