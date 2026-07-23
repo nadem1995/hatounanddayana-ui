@@ -1,5 +1,5 @@
 <template>
-  <section class="relative overflow-hidden bg-primary">
+  <section class="relative xs:pt-20 pt-15 overflow-hidden bg-primary">
     <UContainer>
 <!--  <AppSectionTitle
     :title="$t('sections.categories.title')"
