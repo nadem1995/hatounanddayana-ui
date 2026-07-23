@@ -46,7 +46,7 @@
           <div class="grid grid-cols-3 gap-2 sm:gap-3 h-full">
             <!-- Tall left -->
             <NuxtImg
-              src="images/followUsSection/image1.png"
+              src="images/followUsSection/image3.png"
               :alt="$t('seo.app.appName')"
               width="200"
               height="420"
@@ -68,7 +68,7 @@
 
             <!-- Small 1 -->
             <NuxtImg
-              src="images/followUsSection/image1.png"
+              src="images/followUsSection/image2.png"
               :alt="$t('seo.app.appName')"
               width="200"
               height="200"

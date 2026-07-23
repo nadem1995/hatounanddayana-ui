@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Feature } from "app/types";
+import type { Feature } from "~/types";
 
 const { t } = useI18n();
 
