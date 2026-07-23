@@ -4,7 +4,7 @@
     <HomeCategories v-if="data.data.categories.length>0" :categories="data.data.categories"/>
     <ClientOnly>
       <UContainer class="space-y-15 xs:space-y-20">
-        <AppFolowUs/>
+        <HomeFolowUs/>
         <HomeFeatuers/>
         <AppCTA/>
       </UContainer>

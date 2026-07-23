@@ -1,10 +1,9 @@
 <template>
   <div
-    class="group relative flex flex-col bg-brand-forest rounded-2xl sm:p-5 p-1  overflow-hidden border border-primary/30 hover:shadow-xl shadow-primary"
+    class="group relative flex flex-col bg-brand-forest/10 shadow-lg rounded-2xl sm:p-5 p-1  overflow-hidden"
   >
-    <!-- Top accent bar -->
     <div
-      class="absolute inset-x-0 top-0 h-0.5 bg-linear-to-r from-transparent via-primary to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+      class="absolute inset-x-0 top-0 h-0.5 bg-linear-to-r from-transparent via-brand-forest to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
     />
 
     <!-- Icon badge -->
@@ -21,10 +20,10 @@
 
     <!-- Text -->
     <div class="space-y-1 text-center">
-      <p class="font-bold text-primary sm:text-xl">
+      <p class="font-bold text-brand-forest sm:text-xl">
         {{ feature.title }}
       </p>
-      <p class="xs:text-md text-xs text-primary/70">
+      <p class="xs:text-md text-xs text-brand-forest/70">
         {{ feature.description }}
       </p>
     </div>

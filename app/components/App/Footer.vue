@@ -13,7 +13,6 @@
                 loading="lazy"
               />
             </NuxtLink>
-            {{data}}
             <p class="text-md text-brand-forest">
               {{ $t("footer.about.line1") }}
             </p>

@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    to="/products"
+    :to="{name:'products'}"
     class="group relative overflow-hidden rounded-2xl cursor-pointer flex items-end min-h-55 shadow-lg hover:shadow-2xl transition duration-700"
   >
     <NuxtImg
@@ -16,17 +16,16 @@
       :aria-hidden="true"
       class="absolute bg-pattern-crosshatch inset-0 opacity-[0.1] mix-blend-overlay"
     />
-
     <!-- Main content -->
     <div
       class="relative w-full flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6 p-8"
     >
       <!-- Left copy -->
       <div class="space-y-3">
-        <h3 class="text-3xl lg:text-6xl text-primary font-bold">
+        <h3 class="text-3xl lg:text-6xl text-brand-forest font-bold">
           {{ $t("collection.title") }}
         </h3>
-        <p class="text-primary/90 xs:text-lg max-w-xs">
+        <p class="text-brand-forest/90 xs:text-lg max-w-xs">
           {{ $t("collection.description") }}
         </p>
       </div>
@@ -44,7 +43,7 @@
     <!-- Bottom progress bar animation on hover -->
     <div class="absolute bottom-0 inset-x-0 h-0.5 bg-white/10">
       <div
-        class="h-full w-0 group-hover:w-full bg-[#8b6f47] transition-all duration-1500 ease-out"
+        class="h-full w-0 group-hover:w-full bg-brand-forest transition-all duration-1500 ease-out"
       />
     </div>
   </NuxtLink>

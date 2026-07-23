@@ -1,13 +1,8 @@
-<script setup lang="ts">
-</script>
+
 <template>
   <section aria-labelledby="instagram-heading">
     <AppSectionTitle :title="$t('cta.followUs')" />
-
-    <div class="relative overflow-hidden rounded-3xl bg-brand-forest">
-
-
-
+    <div class="relative overflow-hidden rounded-2xl bg-brand-forest/10 shadow-lg">
       <div class="relative grid lg:grid-cols-5">
         <!-- ── Content ── -->
         <div
@@ -16,14 +11,14 @@
           <!-- Title -->
           <h2
             id="instagram-heading"
-            class="text-3xl lg:text-6xl font-bold  text-primary"
+            class="text-3xl lg:text-6xl font-bold  text-brand-forest"
           >
             {{ $t("cta.title") }}
           </h2>
 
           <!-- Description -->
           <p
-            class="text-primary/90 xs:text-lg max-w-xs"
+            class="text-brand-forest/90 xs:text-lg max-w-xs"
           >
             {{ $t("cta.description") }}
           </p>
@@ -98,3 +93,7 @@
     </div>
   </section>
 </template>
+
+
+<script setup lang="ts">
+</script>
