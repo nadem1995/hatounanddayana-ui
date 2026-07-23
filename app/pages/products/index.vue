@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-screen bg-primary">
+  <div class="min-h-screen bg-primary">
     <AppPageBanner
       :title="$t('products.title')"
       :subtitle="$t('products.subtitle')"
@@ -18,7 +18,6 @@
           @click="isFilterOpen = true"
         />
       </div>
-
       <div class="grid grid-cols-1 gap-5 lg:grid-cols-4">
         <!-- Desktop sidebar filter -->
         <AppFilter
@@ -112,7 +111,7 @@
         </div>
       </div>
     </UContainer>
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">

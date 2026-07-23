@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    :to="{ name: 'products', query: { category: category.slug } }"
+    :to="{ name: 'products', query: { categories: category.slug } }"
     :aria-label="`${$t('links.shopNow')} ${category.name}`"
     class="group relative block aspect-[3/4] overflow-hidden rounded-2xl"
   >
@@ -39,11 +39,11 @@
 
       <!-- Category name -->
       <div class="flex items-end justify-between gap-2">
-        <h3 class="xs:text-lg text-md  text-brand-forest   line-clamp-2">
+        <h3 class="xs:text-lg text-md  text-primary   line-clamp-2">
           {{ category.name }}
         </h3>
         <!-- Thin line decoration -->
-        <div class="shrink-0 h-px w-8 bg-brand-forest/70 mb-1.5 group-hover:w-16 transition-all duration-500" />
+        <div class="shrink-0 h-px w-8 bg-primary/70 mb-1.5 group-hover:w-16 transition-all duration-500" />
       </div>
     </div>
   </NuxtLink>

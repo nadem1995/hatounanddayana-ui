@@ -8,7 +8,7 @@
     <span
       v-for="item in banner"
       :key="item.statement"
-      class="flex text items-center gap-2  px-6 text-[#fae4c4]"
+      class="flex text items-center gap-2  px-6 text-brand-forest"
     >
       {{ item.statement }}
     </span>

@@ -20,7 +20,19 @@
       :index="index + 1"
     />
   </div>
+      <div class="w-full flex justify-center mt-5">
+        <UButton
+          :to="{ name: 'products' }"
+          icon="i-lucide-shopping-bag"
+          size="xl"
+          class="rounded-full bg-brand-forest/90 hover:bg-brand-forest"
+          :label="$t('links.moreProducts')"
+          :aria-label="$t('links.moreProducts')"
+        />
+      </div>
     </UContainer>
+
+
   </section>
 </template>
 
