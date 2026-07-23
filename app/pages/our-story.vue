@@ -16,19 +16,7 @@
     </section>
 
     <section class="relative">
-      <svg
-        class="absolute top-0 left-0 w-full h-20 opacity-15"
-        viewBox="0 0 1200 80"
-        preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M0 40 C 200 0, 400 80, 600 40 S 1000 0, 1200 40"
-          stroke="#b8972e"
-          stroke-width="2"
-          fill="none"
-        />
-      </svg>
+
       <div
         class="max-w-6xl mx-auto pt-10  px-6 grid md:grid-cols-2 gap-16 items-center"
       >
@@ -124,7 +112,14 @@
         {{ t("about.cta.description") }}
       </p>
       <div class="flex gap-4 justify-center mt-10">
-        <UButton class="bg-brand-forest hover:bg-brand-forest/90" icon="i-lucide-shopping-bag" :to="{name:'products'}" :label="$t('about.cta.shopNow')" size="xl" />
+        <UButton
+          :to="{ name: 'products' }"
+          icon="i-lucide-shopping-bag"
+          size="xl"
+          class="rounded-full bg-brand-forest hover:bg-brand-forest cursor-pointer"
+          :label="$t('links.shopNow')"
+          :aria-label="$t('links.shopNow')"
+        />
       </div>
     </section>
   </div>
