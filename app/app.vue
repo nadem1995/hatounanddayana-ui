@@ -69,6 +69,7 @@ useSeoMeta({
   ogImage: `${siteUrl}/images/logo/logo2.png`,
   ogImageWidth: '1200',
   ogImageHeight: '630',
+  ogImageAlt: () => t('seo.app.appName'),
   ogImageType: 'image/png',
   ogUrl: () => `${siteUrl}`,
   ogType: 'website',
