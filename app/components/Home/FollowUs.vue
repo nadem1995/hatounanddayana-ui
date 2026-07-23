@@ -47,7 +47,7 @@
             <!-- Tall left -->
             <NuxtImg
               src="images/placeholders/200x400.webp"
-              alt="Hatoun and dayana"
+              :alt="$t('seo.app.appName')"
               width="200"
               height="420"
               format="webp"
@@ -57,8 +57,8 @@
 
             <!-- Top wide -->
             <NuxtImg
-              src="images/placeholders/400x200.webp"
-              alt="Hatoun and dayana"
+              src="images/followUsSection/image1.png"
+              :alt="$t('seo.app.appName')"
               width="400"
               height="200"
               format="webp"
@@ -69,7 +69,7 @@
             <!-- Small 1 -->
             <NuxtImg
               src="images/placeholders/200.webp"
-              alt="Hatoun and dayana"
+              :alt="$t('seo.app.appName')"
               width="200"
               height="200"
               format="webp"
@@ -80,7 +80,7 @@
             <!-- Small 2 -->
             <NuxtImg
               src="images/placeholders/200.webp"
-              alt="Hatoun and dayana"
+              :alt="$t('seo.app.appName')"
               width="200"
               height="200"
               format="webp"

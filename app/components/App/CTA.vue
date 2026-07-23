@@ -1,10 +1,12 @@
+<script setup lang="ts">
+</script>
 <template>
   <NuxtLink
     :to="{name:'products'}"
     class="group relative overflow-hidden rounded-2xl cursor-pointer flex items-end min-h-55 shadow-lg hover:shadow-2xl transition duration-700"
   >
     <NuxtImg
-      src="/images/placeholders/1200x200.webp"
+      src="images/followUsSection/image1.png"
       alt="hatoun and dayana"
       width="1200"
       height="200"
