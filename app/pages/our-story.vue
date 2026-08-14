@@ -55,32 +55,11 @@
           </div>
         </div>
 
-        <!-- SVG ART -->
-        <div class="relative">
-          <svg viewBox="0 0 200 200" class="w-full opacity-80">
-            <circle
-              cx="100"
-              cy="100"
-              r="80"
-              fill="none"
-              stroke="#d4af37"
-              stroke-width="2"
-            />
-            <circle
-              cx="100"
-              cy="100"
-              r="50"
-              fill="none"
-              stroke="#b8972e"
-              stroke-width="1"
-            />
-            <path
-              d="M100 20 L180 100 L100 180 L20 100 Z"
-              fill="none"
-              stroke="#d4af37"
-            />
-          </svg>
-        </div>
+        <NuxtImg
+          src="/images/d1.png"
+          alt="image"
+          loading="lazy"
+        />
       </div>
     </section>
 
