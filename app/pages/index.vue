@@ -3,7 +3,7 @@
   <div class="rounded-2xl -translate-y-3 overflow-hidden space-y-15 xs:space-y-20">
     <HomeCategories v-if="data.data.categories.length>0" :categories="data.data.categories"/>
     <ClientOnly>
-      <UContainer class="space-y-15 xs:space-y-20">
+      <UContainer class="space-y-25 xs:space-y-30">
         <HomeFollowUs/>
         <HomeFeatuers/>
         <HomeCTA/>

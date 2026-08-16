@@ -3,7 +3,7 @@
     class="group  relative flex flex-col justify-between overflow-hidden rounded-2xl backdrop-blur-xl shadow-lg bg-brand-forest/10 border border-brand-forest/20 hover:border-brand-forest/50 hover:-translate-y-1 transition-all duration-300"
     itemscope
     itemtype="https://schema.org/Product"
-    itemid="`${appConfig.siteUrl}/products/${product.slug}`"
+    :itemid="`${appConfig.siteUrl}/products/${product.slug}`"
   >
     <!-- SEO: extra hidden structured data not covered by visible markup -->
     <meta itemprop="sku" :content="String(product.id)"/>
@@ -33,13 +33,6 @@
             itemprop="image"
           />
         </NuxtLink>
-
-        <!-- Gradient scrim -->
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-          aria-hidden="true"
-        />
-
         <!-- Favorite button -->
         <UButton
           square

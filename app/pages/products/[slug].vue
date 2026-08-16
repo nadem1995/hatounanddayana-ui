@@ -36,13 +36,10 @@
               <NuxtImg
                 :src="activeImage?.image"
                 :alt="`${product.name} - ${selectedVariant?.color_name}`"
-                class="w-full aspect-3/4 object-cover transition-transform duration-200 ease-out"
+                class="w-full h-auto  transition-transform duration-200 ease-out"
                 :style="zoomStyle"
                 format="webp"
                 loading="eager"
-                fetchpriority="high"
-                width="600"
-                height="800"
                 itemprop="image"
               />
 
@@ -94,7 +91,7 @@
                 <link itemprop="url" :href="canonicalUrl"/>
                 <p class="text-brand-forest font-black text-2xl leading-none">
                   {{ product.price }}
-                  <span class="text-sm font-medium text-stone-400">ل.س</span>
+                  <span class="text-sm font-medium text-stone-400">{{$t('currency')}}</span>
                 </p>
               </div>
 
