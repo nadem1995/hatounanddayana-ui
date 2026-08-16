@@ -141,10 +141,11 @@
           </div>
         </div>
       </article>
-      <section class="lg:mt-20 mt-10" v-if="data.related_products.length">
+      <section class="lg:mt-20" v-if="data.related_products.length">
         <AppSectionTitle :title="$t('relatedProducts')"/>
         <UCarousel
           v-slot="{ item }"
+          class="pt-5"
           :autoplay="{ delay: 2000 }"
           :items="data.related_products"
           :ui="{ item: 'sm:basis-1/3 lg:basis-1/5 basis-1/2' }"

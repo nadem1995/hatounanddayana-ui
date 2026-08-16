@@ -1,6 +1,6 @@
 <template>
   <article
-    class="group  relative flex flex-col justify-between overflow-hidden rounded-2xl backdrop-blur-xl shadow-lg bg-brand-forest/10 border border-brand-forest/20 hover:border-brand-forest/50 hover:-translate-y-1 transition-all duration-300"
+    class="group relative flex flex-col justify-between overflow-hidden rounded-2xl backdrop-blur-xl  bg-brand-forest/10 border border-brand-forest/20 hover:border-brand-forest/50  transition-all duration-300"
     itemscope
     itemtype="https://schema.org/Product"
     :itemid="`${appConfig.siteUrl}/products/${product.slug}`"
@@ -11,8 +11,6 @@
     <meta itemprop="description" :content="plainDescription"/>
     <meta itemprop="brand" :content="$t('appName')"/>
     <div>
-
-      <!-- ── Image ── -->
       <div class="relative overflow-hidden spect-3/4">
         <NuxtLink
           :to="`/products/${product.slug}`"
@@ -45,7 +43,7 @@
             : $t('actions.addToFavorites')
         "
           :aria-pressed="favorite"
-          class="absolute top-2 end-2 rounded-full bg-brand-forest/70 shadow-md   hover:scale-110 active:scale-95 transition-all duration-200"
+          class="absolute top-2 end-2 rounded-full bg-brand-forest/70  hover:scale-110 active:scale-95 transition-all duration-200"
           :ui="{
           leadingIcon: favorite
             ? 'text-red-500 fill-red-500'
@@ -54,8 +52,6 @@
           @click.prevent="toggleFavorite(product.id)"
         />
       </div>
-
-      <!-- ── Content ── -->
       <div class="flex flex-col justify-between p-2 sm:p-3">
         <NuxtLink :to="`/products/${product.slug}`" :title="product.name">
           <h3
