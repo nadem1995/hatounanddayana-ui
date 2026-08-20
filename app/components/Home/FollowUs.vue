@@ -57,7 +57,7 @@
 
             <!-- Top wide -->
             <NuxtImg
-              src="images/followUsSection/image1.png"
+              src="images/followUsSection/f3.png"
               :alt="$t('seo.app.appName')"
               width="400"
               height="200"
@@ -68,7 +68,7 @@
 
             <!-- Small 1 -->
             <NuxtImg
-              src="images/followUsSection/image2.png"
+              src="images/followUsSection/f2.png"
               :alt="$t('seo.app.appName')"
               width="200"
               height="200"
@@ -79,7 +79,7 @@
 
             <!-- Small 2 -->
             <NuxtImg
-              src="images/followUsSection/image2.png"
+              src="images/followUsSection/f1.png"
               :alt="$t('seo.app.appName')"
               width="200"
               height="200"

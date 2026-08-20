@@ -4,8 +4,8 @@
   <div class="w-full  relative  shadow rounded-2xl  overflow-hidden">
     <NuxtImg
       src="images/d2.png"
-      alt="hatoun and dayana"
-      format="webp"
+      :alt="$t('seo.app.appName')"
+      format="png"
       loading="lazy"
       class="w-full h-auto"
     />
