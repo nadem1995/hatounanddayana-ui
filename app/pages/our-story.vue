@@ -56,7 +56,7 @@
         </div>
 
         <NuxtImg
-          src="/images/d1.png"
+          src="/images/st.png"
           alt="image"
           loading="lazy"
         />
