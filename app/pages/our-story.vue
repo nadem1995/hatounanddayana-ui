@@ -57,7 +57,7 @@
 
         <NuxtImg
           src="/images/st.png"
-          alt="image"
+          :alt="$t('seo.app.appName')"
           loading="lazy"
         />
       </div>
