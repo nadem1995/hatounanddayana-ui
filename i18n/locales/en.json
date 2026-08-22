@@ -22,7 +22,7 @@
   "shop_by_category": "Shop by Category",
   "contact_us": "Contact Us",
   "best_seller": "Best Seller",
-  "hero_image_alt": "Diana Products Hero Image",
+  "hero_image_alt": "Hatoun and dayana Products Hero Image",
   "seo": {
     "app": {
       "appName": "Hatoun and Dayana",
@@ -34,23 +34,23 @@
     },
     "ariaLabels": {
       "myFavorites": "My Favorite Products",
-      "homeLogo": "Hatoun & Dayana - Go to Homepage"
+      "homeLogo": "Hatoun & Dayana | Go to Homepage"
     },
     "home": {
-      "title": "Home - Diana",
-      "description": "Welcome to Diana - Your destination for elegant fashion and modern style"
+      "title": "Home | Hatoun and dayana",
+      "description": "Welcome to Hatoun and dayana | Your destination for elegant fashion and modern style"
     },
     "products": {
-      "title": "Our Products - Diana",
-      "description": "Discover Diana's latest collections of elegant fashion"
-    },
-    "aboutUs": {
-      "title": "About Us - Diana",
-      "description": "Learn about Diana's story and our journey in the world of fashion"
+      "title": "Our Products | Hatoun and dayana",
+      "description": "Discover Hatoun and dayana's latest collections of elegant fashion"
     },
     "contact": {
-      "title": "Contact Us - Diana",
+      "title": "Contact Us | Hatoun and dayana",
       "description": "We're here to help you, get in touch anytime"
+    },
+    "ourStory": {
+      "title": "Our Story | Hatoun and dayana",
+      "description": "Discover the journey behind our company — how it all began, the milestones we've reached, and the vision that drives us forward every day."
     }
   },
   "features": {
@@ -92,7 +92,7 @@
   },
   "newCollection": "New Collection",
   "aboutUs": {
-    "title": "About Hatoon & Diana",
+    "title": "About Hatoon & Hatoun and dayana",
     "description": "We believe that the abaya is more than just clothing; it is a reflection of culture and identity. We create abayas that express who you are, accompanying you through every moment with confidence and elegance.",
     "readMoreAboutUs": "Learn More About Us"
   },

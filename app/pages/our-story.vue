@@ -141,4 +141,14 @@ const items = computed<BreadcrumbItem[]>(() => [
     to: { name: "our-story" },
   },
 ]);
+
+
+useSeoMeta({
+  title: () => t('seo.ourStory.title'),
+  description: () => t('seo.ourStory.description'),
+  ogTitle: () => t('seo.ourStory.title'),
+  ogDescription: () => t('seo.ourStory.description'),
+  twitterTitle: () => t('seo.ourStory.title'),
+  twitterDescription: () => t('seo.ourStory.description'),
+})
 </script>
