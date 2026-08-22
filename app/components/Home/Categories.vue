@@ -18,14 +18,14 @@
     />
   </div>
       <div class="w-full flex justify-center mt-5">
-        <UButton
+        <NuxtLink
           :to="{ name: 'products' }"
-          icon="i-lucide-shopping-bag"
-          size="xl"
-          class="rounded-full bg-brand-forest/90 hover:bg-brand-forest"
-          :label="$t('links.moreProducts')"
           :aria-label="$t('links.moreProducts')"
-        />
+          class="inline-flex items-center gap-2 rounded-full bg-brand-forest/90 hover:bg-brand-forest text-white px-5 py-2 font-medium transition-colors"
+        >
+          <UIcon name="i-lucide-shopping-bag" class="size-5" />
+          {{ $t('links.moreProducts') }}
+        </NuxtLink>
       </div>
     </UContainer>
   </section>

@@ -91,14 +91,14 @@
         {{ t("about.cta.description") }}
       </p>
       <div class="flex gap-4 justify-center mt-10">
-        <UButton
+        <NuxtLink
           :to="{ name: 'products' }"
-          icon="i-lucide-shopping-bag"
-          size="xl"
-          class="rounded-full bg-brand-forest hover:bg-brand-forest cursor-pointer"
-          :label="$t('links.shopNow')"
           :aria-label="$t('links.shopNow')"
-        />
+          class="inline-flex items-center gap-2 rounded-full bg-brand-forest/90 hover:bg-brand-forest text-white px-5 py-2 font-medium transition-colors"
+        >
+          <UIcon name="i-lucide-shopping-bag" class="size-5" />
+          {{ $t('links.shopNow') }}
+        </NuxtLink>
       </div>
     </section>
   </div>

@@ -29,9 +29,11 @@
         <!-- Mobile filter slideover -->
         <USlideover
           class="bg-primary"
+
           v-model:open="isFilterOpen"
           side="left"
           :ui="{
+            close: 'absolute top-4 end-4 text-brand-forest hover:text-brand-forest/80',
               title: 'text-brand-forest z-10 relative',
             }"
           :title="$t('filter.title')"
@@ -82,29 +84,22 @@
               />
             </div>
 
-            <!-- Pagination -->
-            <div v-if="data.meta.total>12" class="mt-14 flex justify-center">
+            <div v-if="data.meta.total > 12" class="light mt-14 flex justify-center">
               <UPagination
                 v-model:page="data.meta.current_page"
                 :total="data.meta.total"
                 :items-per-page="data.meta.per_page"
-                :to="
-                  (p) => ({
-                    name: 'products',
-                    query: { ...route.query, page: p },
-                  })
-                "
+                :to="(p) => ({ name: 'products', query: { ...route.query, page: p } })"
                 :ui="{
-                  list: 'flex items-center gap-1.5',
-                  item: 'rounded-xl border border-brand-forest/15 bg-brand-forest/5 text-brand-forest font-semibold hover:bg-brand-forest/10 hover:border-brand-forest/30 transition-all duration-300',
-                  label: 'min-w-5 text-center text-sm font-bold',
-                  ellipsis: 'text-brand-forest/30 font-black',
-                  prev: 'rounded-xl border border-brand-forest/15 bg-brand-forest/5 text-brand-forest hover:bg-brand-forest/10 hover:border-brand-forest/30 transition-all duration-200',
-                  next: 'rounded-xl border border-brand-forest/15 bg-brand-forest/5 text-brand-forest hover:bg-brand-forest/10 hover:border-brand-forest/30 transition-all duration-200',
-                  first:
-                    'rounded-xl border border-brand-forest/15 bg-brand-forest/5 text-brand-forest hover:bg-brand-forest/10 hover:border-brand-forest/30 transition-all duration-200',
-                  last: 'rounded-xl border border-brand-forest/15 bg-brand-forest/5 text-brand-forest hover:bg-brand-forest/10 hover:border-brand-forest/30 transition-all duration-200',
-                }"
+      list: 'flex items-center gap-1.5',
+      item: 'rounded-xl border border-brand-forest/15 bg-brand-forest/5 text-brand-forest font-semibold hover:bg-brand-forest/10 hover:border-brand-forest/30 transition-all duration-300',
+      label: 'min-w-5 text-center text-sm font-bold',
+      ellipsis: 'text-brand-forest/30 font-black',
+      prev: 'rounded-xl border border-brand-forest/15 bg-brand-forest/5 text-brand-forest hover:bg-brand-forest/10 hover:border-brand-forest/30 transition-all duration-200',
+      next: 'rounded-xl border border-brand-forest/15 bg-brand-forest/5 text-brand-forest hover:bg-brand-forest/10 hover:border-brand-forest/30 transition-all duration-200',
+      first: 'rounded-xl border border-brand-forest/15 bg-brand-forest/5 text-brand-forest hover:bg-brand-forest/10 hover:border-brand-forest/30 transition-all duration-200',
+      last: 'rounded-xl border border-brand-forest/15 bg-brand-forest/5 text-brand-forest hover:bg-brand-forest/10 hover:border-brand-forest/30 transition-all duration-200',
+    }"
               />
             </div>
           </template>

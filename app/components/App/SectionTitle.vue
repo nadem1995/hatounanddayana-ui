@@ -1,7 +1,7 @@
 <template>
   <div class="my-10 flex flex-col items-center xs:gap-8 gap-2 text-center">
     <!-- Title -->
-    <h2 class="text-3xl lg:text-6xl font-bold text-brand-forest">
+    <h2 class="w-63 text-3xl lg:w-99   lg:text-5xl font-bold text-brand-forest">
       {{ title }}
     </h2>
     <!-- Divider -->

@@ -1,4 +1,9 @@
 export default defineNuxtConfig({
+colorMode: {
+    preference: 'light',
+    fallback: 'light',
+    classSuffix: ''
+  },
   modules: [
     "@nuxt/eslint",
     "@nuxt/ui",
