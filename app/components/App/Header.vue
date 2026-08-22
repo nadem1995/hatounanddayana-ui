@@ -11,7 +11,7 @@
           width="80"
           height="80"
           src="/images/logo/logo2.png"
-          alt="logo"
+          :alt="$t('seo.app.appName')"
           loading="lazy"
         />
       </NuxtLink>
