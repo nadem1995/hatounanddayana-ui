@@ -61,15 +61,15 @@
             {{ product.name }}
           </h3>
         </NuxtLink>
-        <div class="flex items-center justify-between gap-2">
+        <div class="flex items-center mt-2 justify-between gap-2">
           <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <meta itemprop="priceCurrency" content="SYP"/>
+            <meta itemprop="priceCurrency" content="USD"/>
             <meta itemprop="price" :content="String(product.price)"/>
             <link itemprop="availability" href="https://schema.org/InStock"/>
             <link itemprop="url" :href="`${appConfig.siteUrl}/products/${product.slug}`"/>
-            <p class="text-brand-forest font-black text-sm sm:text-base leading-none">
+            <p class="text-brand-forest font-black text-sm sm:text-2xl leading-none">
               {{ product.price }}
-              <span class="text-xs font-medium text-stone-400">ل.س</span>
+              <span class="text-stone-500">{{$t('currency')}}</span>
             </p>
           </div>
           <div
