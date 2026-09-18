@@ -23,8 +23,8 @@ const route = useRoute()
 const { updateQuery } = useQueryParams()
 
 const MIN_PRICE = 0
-const MAX_PRICE = 1000000
-const STEP = 500
+const MAX_PRICE = 1000
+const STEP = 1
 
 const priceRange = ref<[number, number]>([
   Number(route.query.min_price) || MIN_PRICE,
