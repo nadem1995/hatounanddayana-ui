@@ -85,18 +85,18 @@
               </div>
 
               <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                <meta itemprop="priceCurrency" content="SYP"/>
+                <meta itemprop="priceCurrency" content="USD"/>
                 <meta itemprop="price" :content="String(product.price)"/>
                 <link itemprop="availability" href="https://schema.org/InStock"/>
                 <link itemprop="url" :href="canonicalUrl"/>
                 <p class="text-brand-forest font-black text-2xl leading-none">
                   {{ product.price }}
-                  <span class="text-sm font-medium text-stone-400">{{$t('currency')}}</span>
+                  <span class="text-2xl font-medium text-stone-500">{{$t('currency')}}</span>
                 </p>
               </div>
 
 
-              <div v-if="product.variants?.length" class="flex items-center  gap-2">
+              <div v-if="product.variants?.length" class="flex items-center gap-2">
 
                 <div class="flex items-center gap-2" role="list" :aria-label="$t('product.availableColors')">
                   <button
@@ -114,6 +114,27 @@
                 <span class="text-brand-forest">
                   {{ selectedVariant?.color_name }}
                 </span>
+              </div>
+
+              <div
+                v-if="product.sizes"
+                class="flex items-center gap-1 flex-wrap mt-1"
+                role="list"
+                :aria-label="$t('product.availableSizes')"
+              >
+                <UBadge
+                  v-for="size in product.sizes"
+                  :key="size"
+                  :label="size"
+                  size="xl"
+                  color="neutral"
+                  variant="subtle"
+                  class="font-bold text-brand-forest bg-brand-forest/10 ring-1 ring-brand-forest/20"
+                  role="listitem"
+                />
+
+
+
               </div>
 
               <div class="h-px bg-brand-forest/10"/>
@@ -264,7 +285,7 @@ useHead({
         offers: {
           "@type": "Offer",
           url: canonicalUrl.value,
-          priceCurrency: "SYP",
+          priceCurrency: "USD",
           price: product.value.price,
           availability: "https://schema.org/InStock",
         },
