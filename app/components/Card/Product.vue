@@ -151,6 +151,7 @@
 <script setup lang="ts">
 import type {Product} from "~/types";
 
+
 const props = defineProps<{
   product: Product;
   priority?: boolean;
