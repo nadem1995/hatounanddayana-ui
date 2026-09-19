@@ -61,6 +61,26 @@
             {{ product.name }}
           </h3>
         </NuxtLink>
+
+        <!-- Sizes -->
+        <div
+          v-if="productSizes.length"
+          class="flex items-center gap-1 flex-wrap mt-1"
+          role="list"
+          :aria-label="$t('product.availableSizes')"
+        >
+          <UBadge
+            v-for="size in productSizes"
+            :key="size"
+            :label="size"
+            size="xs"
+            color="neutral"
+            variant="subtle"
+            class="text-[10px] font-bold text-brand-forest bg-brand-forest/10 ring-1 ring-brand-forest/20"
+            role="listitem"
+          />
+        </div>
+
         <div class="flex items-center mt-2 justify-between gap-2">
           <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
             <meta itemprop="priceCurrency" content="USD"/>
@@ -140,6 +160,9 @@ const appConfig = useRuntimeConfig().public;
 const {t} = useI18n();
 const {isFavorite, toggleFavorite} = useFavorites();
 const favorite = isFavorite(props.product.id);
+
+// Safely handle null/undefined sizes
+const productSizes = computed(() => props.product.sizes ?? []);
 
 // Strip HTML tags from description for use in meta itemprop
 const plainDescription = computed(() =>
