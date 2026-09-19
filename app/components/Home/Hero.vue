@@ -9,7 +9,7 @@
     loading="eager"
     fetchpriority="high"
     @error="onImageError()"
-    alt="Hero image Hatoun and dayana"
+    :alt="$t('seo.siteDescription')"
   />
 
 
